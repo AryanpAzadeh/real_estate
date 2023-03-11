@@ -1,136 +1,74 @@
-<!-- ============================================================== -->
-<!-- Top header  -->
-<!-- ============================================================== -->
-<!-- Start Navigation -->
-<div class="header header-transparent change-logo">
-    <div class="container">
-        <nav id="navigation" class="navigation navigation-landscape">
-            <div class="nav-header">
-                <a class="nav-brand static-logo" href="#"><img src="{{asset('/assets/img/logo-light.png')}}" class="logo" alt="" /></a>
-                <a class="nav-brand fixed-logo" href="#"><img src="{{asset('/assets/img/logo.png')}}" class="logo" alt="" /></a>
-                <div class="nav-toggle"></div>
-                <div class="mobile_nav">
-                    <ul>
-                        <li class="_my_prt_list"><a href="#"><span>2</span>لیست من</a></li>
-                        <li><a href="#" data-toggle="modal" data-target="#login"><i class="fas fa-user-circle fa-lg"></i></a></li>
+<header class="navbar navbar-expand-lg navbar-light bg-light fixed-top" data-scroll-header>
+    <div class="container"><a class="navbar-brand ms-3 ms-xl-4 logo" href="real-estate-home-v1.html"><img class="d-block" src="img/logo/logo-dark.svg" width="116" alt="Finder"></a>
+        <button class="navbar-toggler ms-auto" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button><a class="btn btn-sm text-primary d-none d-lg-block order-lg-3" href="#signin-modal" data-bs-toggle="modal"><i class="fi-user me-2"></i>ورود به حساب کاربری</a><a class="btn btn-primary btn-sm ms-2 order-lg-3" href="real-estate-add-property.html"><i class="fi-plus me-2"></i>ثبت<span class='d-none d-sm-inline'> ملک</span></a>
+        <div class="collapse navbar-collapse order-lg-2" id="navbarNav">
+            <ul class="navbar-nav navbar-nav-scroll" style="max-height: 35rem;">
+                <!-- Demos switcher-->
+                <li class="nav-item dropdown py-2 me-lg-2"><a class="nav-link dropdown-toggle align-items-center border-end-lg py-1 pe-lg-4" href="#" data-bs-toggle="dropdown" role="button" aria-expanded="false"><i class="fi-layers"></i> دموها</a>
+                    <ul class="dropdown-menu">
+                        <li><a class="dropdown-item" href="real-estate-home-v1.html"> دمو املاک <i class="fi-building fs-base opacity-50 me-2"></i></a></li>
+                        <li class="dropdown-divider"></li>
+                        <li><a class="dropdown-item" href="car-finder-home.html"> دمو خرید خودرو <i class="fi-car fs-base opacity-50 me-2"></i></a></li>
+                        <li class="dropdown-divider"></li>
+                        <li><a class="dropdown-item" href="job-board-home-v1.html"> دمو کاریابی <i class="fi-briefcase fs-base opacity-50 me-2"></i></a></li>
+                        <li class="dropdown-divider"></li>
+                        <li><a class="dropdown-item" href="city-guide-home-v1.html"> دمو راهنمای سفر <i class="fi-map-pin fs-base opacity-50 me-2"></i></a></li>
+                        <li class="dropdown-divider"></li>
+                        <li><a class="dropdown-item" href="index.html">صفحه اصلی <i class="fi-home fs-base opacity-50 me-2"></i></a></li>
+                        <li><a class="dropdown-item" href="components/typography.html">ابزارهای بوت استرپ <i class="fi-list fs-base opacity-50 me-2"></i></a></li>
                     </ul>
-                </div>
-            </div>
-            <div class="nav-menus-wrapper" style="transition-property: none;">
-                <ul class="nav-menu">
-
-                    <li class="active"><a href="#">خانه<span class="submenu-indicator"></span></a>
-                        <ul class="nav-dropdown nav-submenu">
-                            <li><a href="index.html">صفحه اصلی 1</a></li>
-                            <li><a href="home-2.html">صفحه اصلی 2</a></li>
-                            <li><a href="home-3.html">صفحه اصلی 3</a></li>
-                            <li><a href="home-4.html">صفحه اصلی 4</a></li>
-                            <li><a href="home-5.html">صفحه اصلی 5</a></li>
-                            <li><a href="home-6.html">صفحه اصلی 6</a></li>
-                            <li><a href="home-7.html">صفحه اصلی 7</a></li>
-                            <li><a href="map.html">صفحه اصلی نقشه</a></li>
-                        </ul>
-                    </li>
-
-                    <li><a href="#">املاک<span class="submenu-indicator"></span></a>
-                        <ul class="nav-dropdown nav-submenu">
-                            <li><a href="#">املاک شبکه ای<span class="submenu-indicator"></span></a>
-                                <ul class="nav-dropdown nav-submenu">
-                                    <li><a href="grid-layout-with-sidebar.html">شبکه ای 1</a></li>
-                                    <li><a href="grid-layout-2.html">شبکه ای 2</a></li>
-                                    <li><a href="grid-layout-3.html">شبکه ای 3</a></li>
-                                </ul>
-                            </li>
-                            <li><a href="#">املاک لیستی<span class="submenu-indicator"></span></a>
-                                <ul class="nav-dropdown nav-submenu">
-                                    <li><a href="list-layout-with-sidebar.html">لیستی 1</a></li>
-                                    <li><a href="list-layout-with-map-2.html">لیستی 2</a></li>
-                                </ul>
-                            </li>
-                            <li><a href="#">املاک با نقشه<span class="submenu-indicator"></span></a>
-                                <ul class="nav-dropdown nav-submenu">
-                                    <li><a href="half-map.html">نقشه</a></li>
-                                    <li><a href="half-map-2.html">نقشه 2</a></li>
-                                    <li><a href="classical-layout-with-map.html">کلاسیک با نوار کناری</a></li>
-                                    <li><a href="list-layout-with-map.html">لیستی با نوار کناری</a></li>
-                                    <li><a href="grid-layout-with-map.html">شبکه ای با نوار کناری</a></li>
-                                </ul>
-                            </li>
-                            <li><a href="#">مشاوران<span class="submenu-indicator"></span></a>
-                                <ul class="nav-dropdown nav-submenu">
-                                    <li><a href="agents.html">مشاوران شبکه ای 1</a></li>
-                                    <li><a href="agents-2.html">مشاوران شبکه ای 2</a></li>
-                                    <li><a href="agent-page.html">جزئیات مشاوران</a></li>
-                                </ul>
-                            </li>
-                            <li><a href="#">نمایندگان<span class="submenu-indicator"></span></a>
-                                <ul class="nav-dropdown nav-submenu">
-                                    <li><a href="agencies.html">نمایندگان شبکه ای</a></li>
-                                    <li><a href="agency-page.html">جزئیات نمایندگان</a></li>
-                                </ul>
-                            </li>
-                        </ul>
-                    </li>
-
-                    <li><a href="#">مدیریت<span class="submenu-indicator"></span></a>
-                        <ul class="nav-dropdown nav-submenu">
-                            <li class=""><a href="#">مدیریت کاربری<span class="submenu-indicator"></span></a>
-                                <ul class="nav-dropdown nav-submenu">
-                                    <li><a href="dashboard.html">داشبورد کاربری</a></li>
-                                    <li><a href="my-profile.html">پروفایل من</a></li>
-                                    <li><a href="my-property.html">ملک های من</a></li>
-                                    <li><a href="messages.html">پیام ها</a></li>
-                                    <li><a href="bookmark-list.html">ملک ها</a></li>
-                                    <li><a href="submit-property.html">ثبت ملک</a></li>
-                                </ul>
-                            </li>
-                            <li><a href="#">جزئیات ملک<span class="submenu-indicator"></span></a>
-                                <ul class="nav-dropdown nav-submenu">
-                                    <li><a href="single-property-1.html">جزئیات ملک 1</a></li>
-                                    <li><a href="single-property-2.html">جزئیات ملک 2</a></li>
-                                    <li><a href="single-property-3.html">جزئیات ملک 3</a></li>
-                                    <li><a href="single-property-4.html">جزئیات ملک 4</a></li>
-                                </ul>
-                            </li>
-                            <li><a href="compare-property.html">مقایسه املاک</a></li>
-                        </ul>
-                    </li>
-
-                    <li><a href="#">صفحات<span class="submenu-indicator"></span></a>
-                        <ul class="nav-dropdown nav-submenu">
-                            <li><a href="blog.html">وبلاگ</a></li>
-                            <li><a href="about-us.html">درباره ما</a></li>
-                            <li><a href="pricing.html">قیمت</a></li>
-                            <li><a href="404.html">صفحه 404</a></li>
-                            <li><a href="checkout.html">بررسی</a></li>
-                            <li><a href="contact.html">تماس با ما</a></li>
-                            <li><a href="component.html">المنت ها</a></li>
-                            <li><a href="privacy.html">سیاست حفظ حریم خصوصی</a></li>
-                            <li><a href="faq.html">سوالات متداول</a></li>
-                        </ul>
-                    </li>
-
-                </ul>
-
-                <ul class="nav-menu nav-menu-social align-to-right">
-
-                    <li>
-                        <a href="#" class="alio_green" data-toggle="modal" data-target="#login">
-                            <i class="fas fa-sign-in-alt ml-1"></i><span class="dn-lg">ورود</span>
-                        </a>
-                    </li>
-                    <li class="add-listing">
-                        <a href="submit-property.html"  class="theme-cl">
-                            <i class="fas fa-plus-circle ml-1"></i>ثبت ملک
-                        </a>
-                    </li>
-                </ul>
-            </div>
-        </nav>
+                </li>
+                <!-- Menu items-->
+                <li class="nav-item dropdown active"><a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">خانه</a>
+                    <ul class="dropdown-menu">
+                        <li><a class="dropdown-item" href="real-estate-home-v1.html">خانه - نسخه 1</a></li>
+                        <li><a class="dropdown-item" href="real-estate-home-v2.html">خانه - نسخه 2</a></li>
+                    </ul>
+                </li>
+                <li class="nav-item dropdown"><a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">املاک</a>
+                    <ul class="dropdown-menu">
+                        <li><a class="dropdown-item" href="real-estate-catalog-rent.html">ملک برای اجاره</a></li>
+                        <li><a class="dropdown-item" href="real-estate-catalog-sale.html">ملک برای فروش</a></li>
+                        <li><a class="dropdown-item" href="real-estate-single-v1.html">جزئیات - نسخه 1</a></li>
+                        <li><a class="dropdown-item" href="real-estate-single-v2.html">جزئیات - نسخه 2</a></li>
+                    </ul>
+                </li>
+                <li class="nav-item dropdown"><a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">حساب کاربری</a>
+                    <ul class="dropdown-menu">
+                        <li><a class="dropdown-item" href="real-estate-account-info.html">اطلاعات حساب کاربری</a></li>
+                        <li><a class="dropdown-item" href="real-estate-account-security.html">گذرواژه و امنیتی</a></li>
+                        <li><a class="dropdown-item" href="real-estate-account-properties.html">مشخصات من</a></li>
+                        <li><a class="dropdown-item" href="real-estate-account-wishlist.html">لیست مورد علاقه</a></li>
+                        <li><a class="dropdown-item" href="real-estate-account-reviews.html">نظرات</a></li>
+                        <li><a class="dropdown-item" href="real-estate-account-notifications.html">اطلاعیه ها</a></li>
+                        <li><a class="dropdown-item" href="signin-light.html">ورود به اکانت</a></li>
+                        <li><a class="dropdown-item" href="signup-light.html">ثبت نام</a></li>
+                    </ul>
+                </li>
+                <li class="nav-item dropdown"><a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">ثبت ملک</a>
+                    <ul class="dropdown-menu">
+                        <li><a class="dropdown-item" href="real-estate-add-property.html">ثبت</a></li>
+                        <li><a class="dropdown-item" href="real-estate-property-promotion.html">بروزرسانی</a></li>
+                        <li><a class="dropdown-item" href="real-estate-vendor-properties.html">جزئیات</a></li>
+                        <li><a class="dropdown-item" href="real-estate-vendor-reviews.html">نظرات</a></li>
+                    </ul>
+                </li>
+                <li class="nav-item dropdown"><a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">صفحات</a>
+                    <ul class="dropdown-menu">
+                        <li><a class="dropdown-item" href="real-estate-about.html">درباره ما</a></li>
+                        <li class="dropdown"><a class="dropdown-item dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">صفحات وبلاگ</a>
+                            <ul class="dropdown-menu">
+                                <li><a class="dropdown-item" href="real-estate-blog.html">لیست</a></li>
+                                <li><a class="dropdown-item" href="real-estate-blog-single.html">جزئیات</a></li>
+                            </ul>
+                        </li>
+                        <li><a class="dropdown-item" href="real-estate-contacts.html">تماس با ما</a></li>
+                        <li><a class="dropdown-item" href="real-estate-help-center.html">سوالات متداول</a></li>
+                        <li><a class="dropdown-item" href="real-estate-404.html">صفحه 404</a></li>
+                    </ul>
+                </li>
+                <li class="nav-item d-lg-none"><a class="nav-link" href="#signin-modal" data-bs-toggle="modal"><i class="fi-user me-2"></i>ورود به حساب کاربری</a></li>
+            </ul>
+        </div>
     </div>
-</div>
-<!-- End Navigation -->
-<div class="clearfix"></div>
-<!-- ============================================================== -->
-<!-- Top header  -->
-<!-- ============================================================== -->
+</header>

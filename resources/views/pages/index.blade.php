@@ -1,1101 +1,498 @@
 @extends('layouts.master')
 
 @section('content')
-
-
-
-    <!-- ============================ Hero Banner  Start================================== -->
-    <div class="image-cover hero_banner" style="background:url(assets/img/banner-1.png) no-repeat;" data-overlay="0">
-        <div class="container">
-
-            <h1 class="big-header-capt mb-0">خانه جدید خود را پیدا کنید</h1>
-            <p class="text-center mb-4">ملک جدید و برجسته واقع در شهر محلی خود را پیدا کنید.</p>
-            <!-- Type -->
-            <div class="row justify-content-center">
-                <div class="col-xl-10 col-lg-11 col-md-12">
-                    <div class="full_search_box nexio_search lightanic_search hero_search-radius modern">
-                        <div class="search_hero_wrapping">
-
-                            <div class="row">
-                                <div class="col-lg-4 col-md-3 col-sm-12">
-                                    <div class="form-group">
-                                        <label>شهر/استان</label>
-                                        <div class="input-with-icon">
-                                            <select id="location" class="form-control">
-                                                <option value="">&nbsp;</option>
-                                                <option value="1">تهران</option>
-                                                <option value="2">کرج</option>
-                                                <option value="3">تبریز</option>
-                                                <option value="4">اصفهان</option>
-                                                <option value="5">رشت</option>
-                                                <option value="6">زنجان</option>
-                                            </select>
-                                        </div>
-                                    </div>
-                                </div>
-
-                                <div class="col-lg-3 col-md-3 col-sm-12">
-                                    <div class="form-group">
-                                        <label>نوع ملک</label>
-                                        <div class="input-with-icon">
-                                            <select id="ptypes" class="form-control">
-                                                <option value="">&nbsp;</option>
-                                                <option value="1">همه دسته ها</option>
-                                                <option value="2">آپارتمان</option>
-                                                <option value="3">ویلا</option>
-                                                <option value="4">تجاری</option>
-                                                <option value="5">دفتر</option>
-                                                <option value="6">پارکینگ</option>
-                                            </select>
-                                        </div>
-                                    </div>
-                                </div>
-
-                                <div class="col-lg-4 col-md-4 col-sm-12">
-                                    <div class="form-group none">
-                                        <label>قیمت</label>
-                                        <div class="input-with-icon">
-                                            <select id="price" class="form-control">
-                                                <option value="">&nbsp;</option>
-                                                <option value="1">از 40,000 تا 10m</option>
-                                                <option value="2">از 60,000 تا 20m</option>
-                                                <option value="3">از 70,000 تا 30m</option>
-                                                <option value="3">از 80,000 تا 40m</option>
-                                                <option value="3">از 90,000 تا 50m</option>
-                                            </select>
-                                        </div>
-                                    </div>
-                                </div>
-
-                                <div class="col-lg-1 col-md-2 col-sm-12 small-padd">
-                                    <div class="form-group none">
-                                        <a href="#" class="btn search-btn"><i class="fa fa-search"></i></a>
-                                    </div>
-                                </div>
-                            </div>
-
+    <div class="modal fade" id="cost-calculator" tabindex="-1">
+        <div class="modal-dialog modal-dialog-centered" role="document">
+            <div class="modal-content">
+                <div class="modal-header d-block position-relative border-0 px-sm-5 px-4">
+                    <h3 class="h4 modal-title mt-4 text-center">به دنبال خانه هستید؟</h3>
+                    <button class="btn-close position-absolute top-0 end-0 mt-3 me-3" type="button" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body px-sm-5 px-4">
+                    <form class="needs-validation" novalidate>
+                        <div class="mb-3">
+                            <label class="form-label fw-bold mb-2" for="property-city">انتخاب موقعیت</label>
+                            <select class="form-control form-select" id="property-city" required>
+                                <option value="" selected disabled hidden>انتخاب شهر</option>
+                                <option value="Chicago">شیکاگو</option>
+                                <option value="Dallas">پاریس</option>
+                                <option value="Los Angeles">فرانسه</option>
+                                <option value="New York">نیویورک</option>
+                                <option value="San Diego">سن فراسیسکو</option>
+                            </select>
+                            <div class="invalid-feedback">لطفا شهر را انتخاب کنید.</div>
                         </div>
-                    </div>
-
+                        <div class="mb-3">
+                            <select class="form-control form-select" id="property-district" required>
+                                <option value="" selected disabled hidden>انتخاب منطقه</option>
+                                <option value="Brooklyn">سوییس</option>
+                                <option value="Manhattan">پاریس</option>
+                                <option value="Staten Island">آمستردام</option>
+                                <option value="The Bronx">سوئد</option>
+                                <option value="Queens">برزیل</option>
+                            </select>
+                            <div class="invalid-feedback">لطفا منطقه را انتخاب کنید.</div>
+                        </div>
+                        <div class="pt-2 mb-3">
+                            <label class="form-label fw-bold mb-2" for="property-address">آدرس</label>
+                            <input class="form-control" type="text" id="property-address" placeholder="آدرس را وارد کنید" required>
+                            <div class="invalid-feedback">آدرس ملک را انتخاب کنید0</div>
+                        </div>
+                        <div class="pt-2 mb-3">
+                            <label class="form-label fw-bold mb-2">تعداد اتاق</label>
+                            <div class="btn-group" role="group" aria-label="Choose number of rooms">
+                                <input class="btn-check" type="radio" id="rooms-1" name="rooms">
+                                <label class="btn btn-outline-secondary" for="rooms-1">1</label>
+                                <input class="btn-check" type="radio" id="roome-2" name="rooms">
+                                <label class="btn btn-outline-secondary" for="roome-2">2</label>
+                                <input class="btn-check" type="radio" id="roome-3" name="rooms">
+                                <label class="btn btn-outline-secondary" for="roome-3">3</label>
+                                <input class="btn-check" type="radio" id="rooms-4" name="rooms">
+                                <label class="btn btn-outline-secondary" for="rooms-4">4</label>
+                                <input class="btn-check" type="radio" id="rooms-5" name="rooms">
+                                <label class="btn btn-outline-secondary" for="rooms-5">5+</label>
+                            </div>
+                        </div>
+                        <div class="pt-2 mb-4">
+                            <label class="form-label fw-bold mb-2" for="property-area">متراژ (متر مربع)</label>
+                            <input class="form-control" type="text" id="property-area" placeholder="متراژ را وارد کنید" required>
+                            <div class="invalid-feedback">متراژ را وارد کنید</div>
+                        </div>
+                        <button class="btn btn-primary d-block w-100 mb-4" type="submit"><i class="fi-calculator me-2"></i>محاسبه</button>
+                    </form>
                 </div>
             </div>
         </div>
     </div>
-    <!-- ============================ Hero Banner End ================================== -->
-
-    <!-- ============================ Our Awards Start ================================== -->
-    <section class="p-0">
-        <div class="container">
-            <div class="row justify-content-center">
-                <div class="col-xl-11 col-lg-11 col-md-12">
-
-                    <div class="_awards_group">
-                        <ul class="_awards_lists">
-                            <!-- single list -->
-                            <li>
-                                <div class="_awards_list_wrap">
-                                    <div class="_awards_list_thumb"><img src="assets/img/award-1.png" class="img-fluid" alt="" /></div>
-                                    <div class="_awards_list_caption">
-                                        <h5 class="theme-cl">1400</h5>
-                                        <span>جوایز سالانه</span>
-                                    </div>
-                                </div>
-                            </li>
-                            <!-- single list -->
-                            <li>
-                                <div class="_awards_list_wrap">
-                                    <div class="_awards_list_thumb"><img src="assets/img/award-5.png" class="img-fluid" alt="" /></div>
-                                    <div class="_awards_list_caption">
-                                        <h5 class="theme-cl-2">1398</h5>
-                                        <span>جایزه ویژه املاک</span>
-                                    </div>
-                                </div>
-                            </li>
-                            <!-- single list -->
-                            <li>
-                                <div class="_awards_list_wrap">
-                                    <div class="_awards_list_thumb"><img src="assets/img/award-2.png" class="img-fluid" alt="" /></div>
-                                    <div class="_awards_list_caption">
-                                        <h5 class="text-warning">1399</h5>
-                                        <span>جایزه سالانه ملک</span>
-                                    </div>
-                                </div>
-                            </li>
-                        </ul>
-                    </div>
-
-                </div>
-            </div>
-        </div>
-    </section>
-    <!-- ============================ Our Awards End ================================== -->
-
-    <!-- ============================ Property Category Start ================================== -->
-    <section class="min">
-        <div class="container">
-
-            <div class="row justify-content-center">
-                <div class="col-lg-7 col-md-8">
-                    <div class="sec-heading center">
-                        <h2>دسته بندی خود را انتخاب کنید</h2>
-                        <p>لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ و با استفاده از طراحان گرافیک است. چاپگرها و متون بلکه روزنامه و مجله در ستون و سطرآنچنان.</p>
-                    </div>
-                </div>
-            </div>
-
-            <div class="row justify-content-center mt-4">
-
-                <!-- Single Category -->
-                <div class="col-lg-3 col-md-4 col-sm-6">
-                    <div class="_category_box">
-                        <a href="list-layout-with-sidebar.html">
-                            <div class="_category_elio">
-                                <div class="_category_thumb">
-                                    <img src="assets/img/f-1.png" class="img-fluid hover" alt="" />
-                                    <img src="assets/img/f-11.png" class="img-fluid simple" alt="" />
-                                </div>
-                                <div class="_category_caption">
-                                    <h5>دفتر و استودیو</h5>
-                                    <span>22 ملک</span>
-                                </div>
+    <!-- Hero-->
+    <section class="container-fluid my-5 pt-5 pb-lg-4 px-xxl-4">
+        <div class="jarallax card align-items-center justify-content-center border-0 p-md-5 p-4 bg-secondary overflow-hidden mt-n3" style="min-height: 65vh; background-image: url(img/real-estate/hero-image-v2.jpg);" data-jarallax data-speed="0.5"><span class="img-overlay opacity-40"></span>
+            <div class="content-overlay" style="max-width: 856px;">
+                <h1 class="display-5 mb-5 pb-md-3 px-md-3 text-white text-center">راه آسان برای پیدا کردن یک ملک مناسب</h1>
+                <form class="form-group d-block">
+                    <div class="row g-0">
+                        <div class="col-md-10 d-sm-flex align-items-center">
+                            <div class="dropdown w-sm-50 border-end-sm" data-bs-toggle="select">
+                                <button class="btn btn-lg btn-link dropdown-toggle ps-2 ps-sm-3" type="button" data-bs-toggle="dropdown"><i class="fi-home me-2"></i><span class="dropdown-toggle-label">اجاره</span></button>
+                                <input type="hidden">
+                                <ul class="dropdown-menu">
+                                    <li><a class="dropdown-item" href="#"><span class="dropdown-item-label">اجاره</span></a></li>
+                                    <li><a class="dropdown-item" href="#"><span class="dropdown-item-label">فروش</span></a></li>
+                                </ul>
                             </div>
-                        </a>
-                    </div>
-                </div>
-
-                <!-- Single Category -->
-                <div class="col-lg-3 col-md-4 col-sm-6">
-                    <div class="_category_box">
-                        <a href="list-layout-with-sidebar.html">
-                            <div class="_category_elio">
-                                <div class="_category_thumb">
-                                    <img src="assets/img/f-2.png" class="img-fluid hover" alt="" />
-                                    <img src="assets/img/f-22.png" class="img-fluid simple" alt="" />
-                                </div>
-                                <div class="_category_caption">
-                                    <h5>صنعتی</h5>
-                                    <span>22 ملک</span>
-                                </div>
+                            <hr class="d-sm-none my-2">
+                            <div class="dropdown w-sm-50 border-end-sm" data-bs-toggle="select">
+                                <button class="btn btn-lg btn-link dropdown-toggle ps-2 ps-sm-3" type="button" data-bs-toggle="dropdown"><i class="fi-map-pin me-2"></i><span class="dropdown-toggle-label">موقعیت</span></button>
+                                <input type="hidden">
+                                <ul class="dropdown-menu">
+                                    <li><a class="dropdown-item" href="#"><span class="dropdown-item-label">خانه</span></a></li>
+                                    <li><a class="dropdown-item" href="#"><span class="dropdown-item-label">آپارتمان</span></a></li>
+                                    <li><a class="dropdown-item" href="#"><span class="dropdown-item-label">تجاری و اداری</span></a></li>
+                                    <li><a class="dropdown-item" href="#"><span class="dropdown-item-label">سوئیت</span></a></li>
+                                </ul>
                             </div>
-                        </a>
-                    </div>
-                </div>
-
-                <!-- Single Category -->
-                <div class="col-lg-3 col-md-4 col-sm-6">
-                    <div class="_category_box">
-                        <a href="list-layout-with-sidebar.html">
-                            <div class="_category_elio">
-                                <div class="_category_thumb">
-                                    <img src="assets/img/f-3.png" class="img-fluid hover" alt="" />
-                                    <img src="assets/img/f-33.png" class="img-fluid simple" alt="" />
-                                </div>
-                                <div class="_category_caption">
-                                    <h5>ساختمان</h5>
-                                    <span>85 ملک</span>
-                                </div>
-                            </div>
-                        </a>
-                    </div>
-                </div>
-
-                <!-- Single Category -->
-                <div class="col-lg-3 col-md-4 col-sm-6">
-                    <div class="_category_box">
-                        <a href="list-layout-with-sidebar.html">
-                            <div class="_category_elio">
-                                <div class="_category_thumb">
-                                    <img src="assets/img/f-4.png" class="img-fluid hover" alt="" />
-                                    <img src="assets/img/f-44.png" class="img-fluid simple" alt="" />
-                                </div>
-                                <div class="_category_caption">
-                                    <h5>تجاری</h5>
-                                    <span>79 ملک</span>
-                                </div>
-                            </div>
-                        </a>
-                    </div>
-                </div>
-
-                <!-- Single Category -->
-                <div class="col-lg-3 col-md-4 col-sm-6">
-                    <div class="_category_box">
-                        <a href="list-layout-with-sidebar.html">
-                            <div class="_category_elio">
-                                <div class="_category_thumb">
-                                    <img src="assets/img/f-5.png" class="img-fluid hover" alt="" />
-                                    <img src="assets/img/f-55.png" class="img-fluid simple" alt="" />
-                                </div>
-                                <div class="_category_caption">
-                                    <h5>خانه و ویلا</h5>
-                                    <span>22 ملک</span>
-                                </div>
-                            </div>
-                        </a>
-                    </div>
-                </div>
-
-                <!-- Single Category -->
-                <div class="col-lg-3 col-md-4 col-sm-6">
-                    <div class="_category_box">
-                        <a href="list-layout-with-sidebar.html">
-                            <div class="_category_elio">
-                                <div class="_category_thumb">
-                                    <img src="assets/img/f-6.png" class="img-fluid hover" alt="" />
-                                    <img src="assets/img/f-66.png" class="img-fluid simple" alt="" />
-                                </div>
-                                <div class="_category_caption">
-                                    <h5>پارکینگ</h5>
-                                    <span>22 ملک</span>
-                                </div>
-                            </div>
-                        </a>
-                    </div>
-                </div>
-
-                <!-- Single Category -->
-                <div class="col-lg-3 col-md-4 col-sm-6">
-                    <div class="_category_box">
-                        <a href="list-layout-with-sidebar.html">
-                            <div class="_category_elio">
-                                <div class="_category_thumb">
-                                    <img src="assets/img/f-7.png" class="img-fluid hover" alt="" />
-                                    <img src="assets/img/f-77.png" class="img-fluid simple" alt="" />
-                                </div>
-                                <div class="_category_caption">
-                                    <h5>دفتر و استودیو</h5>
-                                    <span>72 ملک</span>
-                                </div>
-                            </div>
-                        </a>
-                    </div>
-                </div>
-
-                <!-- Single Category -->
-                <div class="col-lg-3 col-md-4 col-sm-6">
-                    <div class="_category_box">
-                        <a href="list-layout-with-sidebar.html">
-                            <div class="_category_elio">
-                                <div class="_category_thumb">
-                                    <img src="assets/img/f-8.png" class="img-fluid hover" alt="" />
-                                    <img src="assets/img/f-88.png" class="img-fluid simple" alt="" />
-                                </div>
-                                <div class="_category_caption">
-                                    <h5>آپارتمان</h5>
-                                    <span>102 ملک</span>
-                                </div>
-                            </div>
-                        </a>
-                    </div>
-                </div>
-
-            </div>
-
-        </div>
-    </section>
-    <!-- ============================ Property Category End ================================== -->
-
-    <!-- ============================ Properties Start ================================== -->
-    <section class="pt-0 min">
-        <div class="container">
-
-            <div class="row justify-content-center">
-                <div class="col-lg-7 col-md-8">
-                    <div class="sec-heading center">
-                        <h2>املاک تبلیغ شده ویژه</h2>
-                        <p>لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ و با استفاده از طراحان گرافیک است. چاپگرها و متون بلکه روزنامه و مجله در ستون و سطرآنچنان.</p>
-                    </div>
-                </div>
-            </div>
-
-            <div class="row justify-content-center">
-                <!-- Single Property -->
-                <div class="col-lg-4 col-md-6 col-sm-12">
-                    <div class="property-listing property-2">
-
-                        <div class="listing-img-wrapper">
-                            <div class="_exlio_125">برای اجاره</div>
-                            <div class="list-img-slide">
-                                <div class="click">
-                                    <div><a href="single-property-1.html"><img src="assets/img/p-1.png" class="img-fluid mx-auto" alt="" /></a></div>
-                                    <div><a href="single-property-1.html"><img src="assets/img/p-2.png" class="img-fluid mx-auto" alt="" /></a></div>
-                                    <div><a href="single-property-1.html"><img src="assets/img/p-3.png" class="img-fluid mx-auto" alt="" /></a></div>
-                                </div>
-                            </div>
-                        </div>
-
-                        <div class="listing-detail-wrapper">
-                            <div class="listing-short-detail-wrap">
-                                <div class="_card_list_flex mb-2">
-                                    <div class="_card_flex_01">
-                                        <span class="_list_blickes _netork">4 شبکه</span>
-                                        <span class="_list_blickes types">آپارتمان</span>
-                                    </div>
-                                    <div class="_card_flex_last">
-                                        <h6 class="listing-card-info-price mb-0">670 میلیون</h6>
-                                    </div>
-                                </div>
-                                <div class="_card_list_flex">
-                                    <div class="_card_flex_01">
-                                        <h4 class="listing-name verified"><a href="single-property-1.html" class="prt-link-detail">لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت</a></h4>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-
-                        <div class="price-features-wrapper">
-                            <div class="list-fx-features">
-                                <div class="listing-card-info-icon">
-                                    <div class="inc-fleat-icon"><img src="assets/img/bed.svg" width="13" alt="" /></div>4 تخته
-                                </div>
-                                <div class="listing-card-info-icon">
-                                    <div class="inc-fleat-icon"><img src="assets/img/bathtub.svg" width="13" alt="" /></div>2 حمام
-                                </div>
-                                <div class="listing-card-info-icon">
-                                    <div class="inc-fleat-icon"><img src="assets/img/move.svg" width="13" alt="" /></div>820 متر مربع
-                                </div>
-                            </div>
-                        </div>
-
-                        <div class="listing-detail-footer">
-                            <div class="footer-first">
-                                <div class="foot-location"><img src="assets/img/pin.svg" width="18" alt="" />مونترال ، کانادا</div>
-                            </div>
-                            <div class="footer-flex">
-                                <ul class="selio_style">
-                                    <li>
-                                        <div class="prt_saveed_12lk">
-                                            <label class="toggler toggler-danger" data-toggle="tooltip" data-placement="top" data-original-title="ذخیره"><input type="checkbox"><i class="ti-heart"></i></label>
-                                        </div>
-                                    </li>
-                                    <li>
-                                        <div class="prt_saveed_12lk">
-                                            <a href="compare-property.html" data-toggle="tooltip" data-placement="top" data-original-title="مقایسه"><i class="ti-control-shuffle"></i></a>
-                                        </div>
-                                    </li>
-                                    <li>
-                                        <div class="prt_saveed_12lk">
-                                            <a href="single-property-1.html" data-toggle="tooltip" data-placement="top" data-original-title="مشاهده"><i class="ti-arrow-left"></i></a>
-                                        </div>
-                                    </li>
+                            <hr class="d-sm-none my-2">
+                            <div class="dropdown w-sm-50" data-bs-toggle="select">
+                                <button class="btn btn-lg btn-link dropdown-toggle ps-2 ps-sm-3" type="button" data-bs-toggle="dropdown"><i class="fi-list me-2"></i><span class="dropdown-toggle-label">نوع ملک</span></button>
+                                <input type="hidden">
+                                <ul class="dropdown-menu">
+                                    <li><a class="dropdown-item" href="#"><span class="dropdown-item-label">خانه</span></a></li>
+                                    <li><a class="dropdown-item" href="#"><span class="dropdown-item-label">آپارتمان</span></a></li>
+                                    <li><a class="dropdown-item" href="#"><span class="dropdown-item-label">تجاری و اداری</span></a></li>
+                                    <li><a class="dropdown-item" href="#"><span class="dropdown-item-label">سوئیت</span></a></li>
+                                    <li><a class="dropdown-item" href="#"><span class="dropdown-item-label">زمین</span></a></li>
                                 </ul>
                             </div>
                         </div>
-
+                        <hr class="d-md-none mt-2">
+                        <div class="col-md-2 d-sm-flex align-items-center pt-3 pt-md-0">
+                            <button class="btn btn-lg btn-icon btn-primary px-3 w-100" type="button">جستجو</button>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </section>
+    <!-- About-->
+    <section class="container mb-5 pb-lg-4">
+        <div class="row">
+            <div class="col-lg-6 col-md-7">
+                <div class="row gy-4">
+                    <div class="col-md-5 col-sm-6">
+                        <h2 class="h3 mb-0 ">ما بهترین ها در بازار مسکن هستیم!</h2>
+                    </div>
+                    <div class="col-sm-6 offset-md-1">
+                        <p class="mb-0">صنعت چاپ و با استفاده از طراحان گرافیک است. چاپگرها و متون بلکه روزنامه و مجله در ستون و سطرآنچنان که لازم است و برای شرایط فعلی تکنولوژی مورد نیاز و کاربردهای متنوع با هدف بهبود ابزارهای کاربردی می باشد. </p>
                     </div>
                 </div>
-                <!-- End Single Property -->
-
-                <!-- Single Property -->
-                <div class="col-lg-4 col-md-6 col-sm-12">
-                    <div class="property-listing property-2">
-
-                        <div class="listing-img-wrapper">
-                            <div class="_exlio_125">برای فروش</div>
-                            <div class="list-img-slide">
-                                <div class="click">
-                                    <div><a href="single-property-1.html"><img src="assets/img/p-4.png" class="img-fluid mx-auto" alt="" /></a></div>
-                                    <div><a href="single-property-1.html"><img src="assets/img/p-5.png" class="img-fluid mx-auto" alt="" /></a></div>
-                                    <div><a href="single-property-1.html"><img src="assets/img/p-6.png" class="img-fluid mx-auto" alt="" /></a></div>
-                                </div>
+                <div class="py-3">
+                    <hr class="my-4">
+                </div>
+                <div class="row row-cols-md-3 row-cols-1 gy-4 gx-lg-5 gx-3 text-center px-lg-4">
+                    <div class="col"><img class="d-block mx-auto mb-3" src="img/real-estate/brands/trustpilot.svg" alt="Trustpilot">
+                        <h5 class="mb-1">عالی</h5><span class="fs-sm">امتیاز 4.8 از 5</span>
+                    </div>
+                    <div class="col">
+                        <h5 class="h2 mb-2">200 هزار</h5><span class="fs-sm">لیست املاک جدید در سراسر جهان</span>
+                    </div>
+                    <div class="col">
+                        <h5 class="h2 mb-2">3.8</h5><span class="fs-sm">میانگین درآمد سالانه هر صاحبخانه</span>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-5 offset-lg-1"><img class="d-block mx-auto rotate-img" src="img/real-estate/illustrations/find-alt.svg" alt="Illustration"></div>
+        </div>
+    </section>
+    <!-- Newly listed properties-->
+    <section class="container mt-n3 mt-md-0 mb-5 pb-3 pb-lg-4">
+        <div class="d-flex align-items-end justify-content-between mb-4 pb-md-2">
+            <h2 class="h3 mb-0 ">املاک ویژه ما</h2><a class="btn btn-link fw-normal ms-2 p-0" href="real-estate-catalog-sale.html">مشاهده همه<i class="fi-arrow-long-left ms-2"></i></a>
+        </div>
+        <!-- Carousel-->
+        <div class="tns-carousel-wrapper">
+            <div class="tns-carousel-inner" data-carousel-options="{&quot;mode&quot;: &quot;gallery&quot;, &quot;speed&quot;: 800, &quot;nav&quot;: false, &quot;controlsContainer&quot;: &quot;#carousel-controls-lp&quot;}">
+                <!-- Item-->
+                <div>
+                    <div class="row">
+                        <div class="col-lg-8 col-md-7 mb-md-0 mb-3">
+                            <div class="position-relative pr-lg-5">
+                                <div class="position-absolute top-0 start-0 zindex-1 m-3 p-1"><span class="badge bg-info fs-sm me-2">جدید</span><span class="badge bg-success fs-sm me-2">تاییده شده</span></div><img class="rounded-3 zindex-5" src="img/real-estate/recent/04.jpg" alt="Article image">
                             </div>
                         </div>
-
-                        <div class="listing-detail-wrapper">
-                            <div class="listing-short-detail-wrap">
-                                <div class="_card_list_flex mb-2">
-                                    <div class="_card_flex_01">
-                                        <span class="_list_blickes _netork">5 شبکه</span>
-                                        <span class="_list_blickes types">آپارتمان</span>
-                                    </div>
-                                    <div class="_card_flex_last">
-                                        <h6 class="listing-card-info-price mb-0">690 میلیون</h6>
-                                    </div>
-                                </div>
-                                <div class="_card_list_flex">
-                                    <div class="_card_flex_01">
-                                        <h4 class="listing-name verified"><a href="single-property-1.html" class="prt-link-detail">طراحان خلاقی و فرهنگ پیشرو در زبان فارسی ایجاد کرد. در این</a></h4>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-
-                        <div class="price-features-wrapper">
-                            <div class="list-fx-features">
-                                <div class="listing-card-info-icon">
-                                    <div class="inc-fleat-icon"><img src="assets/img/bed.svg" width="13" alt="" /></div>4 تخته
-                                </div>
-                                <div class="listing-card-info-icon">
-                                    <div class="inc-fleat-icon"><img src="assets/img/bathtub.svg" width="13" alt="" /></div>2 حمام
-                                </div>
-                                <div class="listing-card-info-icon">
-                                    <div class="inc-fleat-icon"><img src="assets/img/move.svg" width="13" alt="" /></div>700 متر مربع
-                                </div>
-                            </div>
-                        </div>
-
-                        <div class="listing-detail-footer">
-                            <div class="footer-first">
-                                <div class="foot-location"><img src="assets/img/pin.svg" width="18" alt="" />مونترال ، کانادا</div>
-                            </div>
-                            <div class="footer-flex">
-                                <ul class="selio_style">
-                                    <li>
-                                        <div class="prt_saveed_12lk">
-                                            <label class="toggler toggler-danger" data-toggle="tooltip" data-placement="top" data-original-title="ذخیره"><input type="checkbox"><i class="ti-heart"></i></label>
-                                        </div>
-                                    </li>
-                                    <li>
-                                        <div class="prt_saveed_12lk">
-                                            <a href="compare-property.html" data-toggle="tooltip" data-placement="top" data-original-title="مقایسه"><i class="ti-control-shuffle"></i></a>
-                                        </div>
-                                    </li>
-                                    <li>
-                                        <div class="prt_saveed_12lk">
-                                            <a href="single-property-1.html" data-toggle="tooltip" data-placement="top" data-original-title="مشاهده"><i class="ti-arrow-left"></i></a>
-                                        </div>
-                                    </li>
+                        <div class="col-lg-4 col-md-5"><span class="d-inline-block fs-sm text-uppercase text-primary mb-2 from-top">فروشی</span>
+                            <div class="from-end delay-2">
+                                <h3 class="h4 mb-2">آپارتمان 3خوابه</h3>
+                                <p class="mb-md-4 mb-3 fs-sm">تهران، خیابان سعادت آباد، خیابان سرو غربی مجتمع رویا</p>
+                                <ul class="d-flex mb-md-4 mb-3 list-unstyled">
+                                    <li class="me-3 ps-3 border-end"><b class="ms-1">4</b><i class="fi-bed mt-n1 lead align-middle text-muted"></i></li>
+                                    <li class="me-3 ps-3 border-end"><b class="ms-1">2</b><i class="fi-bath mt-n1 lead align-middle text-muted"></i></li>
+                                    <li class="me-3 ps-3 border-end"><b class="ms-1">2</b><i class="fi-car mt-n1 lead align-middle text-muted"></i></li>
+                                    <li><b>126 </b>مترمربع</li>
                                 </ul>
+                                <p class="mb-4 pb-md-2">ارائه راهکارها و شرایط سخت تایپ به پایان رسد وزمان مورد نیاز شامل حروفچینی دستاوردهای اصلی و جوابگوی سوالات پیوسته اهل دنیای موجود طراحی اساسا مورد استفاده قرار گیرد.</p>
+                            </div>
+                            <div class="btn-group btn-group-lg scale-up delay-3" role="group" aria-label="خرید یا نشان کردن">
+                                <button class="btn btn-primary px-3 border-start border-light" data-bs-toggle="tooltip" data-bs-placement="top" title="نشان کردن"><i class="fi-heart fs-5"></i></button>
+                                <a class="btn btn-primary" href="real-estate-single-v1-v2.html">قیمت 120 میلیون تومان</a>
                             </div>
                         </div>
-
                     </div>
                 </div>
-                <!-- End Single Property -->
-
-                <!-- Single Property -->
-                <div class="col-lg-4 col-md-6 col-sm-12">
-                    <div class="property-listing property-2">
-
-                        <div class="listing-img-wrapper">
-                            <div class="_exlio_125">برای اجاره</div>
-                            <div class="list-img-slide">
-                                <div class="click">
-                                    <div><a href="single-property-1.html"><img src="assets/img/p-7.png" class="img-fluid mx-auto" alt="" /></a></div>
-                                    <div><a href="single-property-1.html"><img src="assets/img/p-8.png" class="img-fluid mx-auto" alt="" /></a></div>
-                                    <div><a href="single-property-1.html"><img src="assets/img/p-9.png" class="img-fluid mx-auto" alt="" /></a></div>
-                                </div>
+                <!-- Item-->
+                <div>
+                    <div class="row">
+                        <div class="col-lg-8 col-md-7 mb-md-0 mb-3">
+                            <div class="position-relative pr-lg-5">
+                                <div class="position-absolute top-0 start-0 zindex-1 m-3 p-1"><span class="badge bg-info fs-sm me-2">جدید</span><span class="badge bg-success fs-sm me-2">تاییده شده</span></div><img class="rounded-3 zindex-5" src="img/real-estate/recent/05.jpg" alt="Article image">
                             </div>
                         </div>
-
-                        <div class="listing-detail-wrapper">
-                            <div class="listing-short-detail-wrap">
-                                <div class="_card_list_flex mb-2">
-                                    <div class="_card_flex_01">
-                                        <span class="_list_blickes _netork">4 شبکه</span>
-                                        <span class="_list_blickes types">ویلایی</span>
-                                    </div>
-                                    <div class="_card_flex_last">
-                                        <h6 class="listing-card-info-price mb-0">850 میلیون</h6>
-                                    </div>
-                                </div>
-                                <div class="_card_list_flex">
-                                    <div class="_card_flex_01">
-                                        <h4 class="listing-name verified"><a href="single-property-1.html" class="prt-link-detail">سه درصد گذشته، حال و آینده شناخت فراوان جامعه و متخصصان</a></h4>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-
-                        <div class="price-features-wrapper">
-                            <div class="list-fx-features">
-                                <div class="listing-card-info-icon">
-                                    <div class="inc-fleat-icon"><img src="assets/img/bed.svg" width="13" alt="" /></div>3 تخته
-                                </div>
-                                <div class="listing-card-info-icon">
-                                    <div class="inc-fleat-icon"><img src="assets/img/bathtub.svg" width="13" alt="" /></div>2 حمام
-                                </div>
-                                <div class="listing-card-info-icon">
-                                    <div class="inc-fleat-icon"><img src="assets/img/move.svg" width="13" alt="" /></div>800 متر مربع
-                                </div>
-                            </div>
-                        </div>
-
-                        <div class="listing-detail-footer">
-                            <div class="footer-first">
-                                <div class="foot-location"><img src="assets/img/pin.svg" width="18" alt="" />مونترال ، کانادا</div>
-                            </div>
-                            <div class="footer-flex">
-                                <ul class="selio_style">
-                                    <li>
-                                        <div class="prt_saveed_12lk">
-                                            <label class="toggler toggler-danger" data-toggle="tooltip" data-placement="top" data-original-title="ذخیره"><input type="checkbox"><i class="ti-heart"></i></label>
-                                        </div>
-                                    </li>
-                                    <li>
-                                        <div class="prt_saveed_12lk">
-                                            <a href="compare-property.html" data-toggle="tooltip" data-placement="top" data-original-title="مقایسه"><i class="ti-control-shuffle"></i></a>
-                                        </div>
-                                    </li>
-                                    <li>
-                                        <div class="prt_saveed_12lk">
-                                            <a href="single-property-1.html" data-toggle="tooltip" data-placement="top" data-original-title="مشاهده"><i class="ti-arrow-left"></i></a>
-                                        </div>
-                                    </li>
+                        <div class="col-lg-4 col-md-5"><span class="d-inline-block fs-sm text-uppercase text-primary mb-2 from-top">اجاره ای</span>
+                            <div class="from-end delay-2">
+                                <h3 class="h4 mb-2">ویلا لوکس در لوس آنجلس</h3>
+                                <p class="mb-md-4 mb-3 fs-sm">خیابان سعادت آباد، خیابان سرو غربی</p>
+                                <ul class="d-flex mb-md-4 mb-3 list-unstyled">
+                                    <li class="me-3 ps-3 border-end"><b class="ms-1">5</b><i class="fi-bed mt-n1 lead align-middle text-muted"></i></li>
+                                    <li class="me-3 ps-3 border-end"><b class="ms-1">3</b><i class="fi-bath mt-n1 lead align-middle text-muted"></i></li>
+                                    <li class="me-3 ps-3 border-end"><b class="ms-1">1</b><i class="fi-car mt-n1 lead align-middle text-muted"></i></li>
+                                    <li><b>140 </b>مترمربع</li>
                                 </ul>
+                                <p class="mb-4 pb-md-2">ارائه راهکارها و شرایط سخت تایپ به پایان رسد وزمان مورد نیاز شامل حروفچینی دستاوردهای اصلی و جوابگوی سوالات پیوسته اهل دنیای موجود طراحی اساسا مورد استفاده قرار گیرد.</p>
+                            </div>
+                            <div class="btn-group btn-group-lg scale-up delay-3" role="group" aria-label="Buy now or add to wishlist"><a class="btn btn-primary" href="#">اجاره برای 50 میلیون تومان</a>
+                                <button class="btn btn-primary px-3 border-start border-light" data-bs-toggle="tooltip" data-bs-placement="top" title="Add to Wishlist"><i class="fi-heart fs-5"></i></button>
                             </div>
                         </div>
-
                     </div>
                 </div>
-                <!-- End Single Property -->
             </div>
-
+        </div>
+        <!-- Carousel custom controls-->
+        <div class="tns-carousel-controls pt-2 mt-4" id="carousel-controls-lp">
+            <button class="me-3" type="button"><i class="fi-chevron-left fs-xs"></i></button>
+            <button type="button"><i class="fi-chevron-right fs-xs"></i></button>
         </div>
     </section>
-    <!-- ============================ Properties End ================================== -->
-
-    <!-- ============================ Top Agents ================================== -->
-    <section class="image-cover min" style="background:#122947 url(assets/img/pattern.png) no-repeat;">
-        <div class="container">
-
-            <div class="row justify-content-center">
-                <div class="col-lg-7 col-md-8">
-                    <div class="sec-heading center light">
-                        <h2>مشاوران برجسته ما</h2>
-                        <p>لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ و با استفاده از طراحان گرافیک است. چاپگرها و متون بلکه روزنامه و مجله در ستون و سطرآنچنان.</p>
+    <!-- Discover locations-->
+    <section class="container mb-5 pb-lg-5 pb-4">
+        <div class="d-flex align-items-start justify-content-between mb-3 mb-md-4 pb-md-2">
+            <div class="d-flex flex-md-row flex-column align-items-center">
+                <h2 class="h3 mb-4 mb-md-0 ">شهرهای پیشنهادی ما</h2>
+                <ul class="nav nav-tabs mb-0 me-md-4 me-n3 pl-lg-2" role="tablist">
+                    <li class="nav-item"><a class="nav-link active" href="#">اجاره</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#">فروش</a></li>
+                </ul>
+            </div><a class="btn btn-link fw-normal ms-2 p-0" href="real-estate-catalog-rent.html">مشاهده همه<i class="fi-arrow-long-left ms-2"></i></a>
+        </div>
+        <!-- Carousel-->
+        <div class="tns-carousel-wrapper tns-nav-outside tns-nav-outside-flush mx-n2">
+            <div class="tns-carousel-inner row gx-4 mx-0 py-3" data-carousel-options="{&quot;items&quot;: 3, &quot;controls&quot;: false, &quot;responsive&quot;: {&quot;0&quot;:{&quot;items&quot;:1},&quot;500&quot;:{&quot;items&quot;:2},&quot;768&quot;:{&quot;items&quot;:3}}}">
+                <div class="col">
+                    <div class="card card-hover border-0 shadow-sm h-100 p-2">
+                        <div class="card-body p-4"><img class="d-block rounded-3 mb-3" src="img/real-estate/locations/usa.svg" width="80">
+                            <h4 class="h5 mb-2 ">موقعیت های عالی</h4><span class="fs-sm text-muted">پیوسته اهل دنیای موجود طراحی اساسا مورد استفاده قرار گیرد.</span>
+                            <hr class="my-4">
+                            <ul class="nav flex-column mb-0">
+                                <li class="nav-item mb-2 pb-1"><a class="nav-link p-0 fw-normal" href="#">نیویورک</a></li>
+                                <li class="nav-item mb-2 pb-1"><a class="nav-link p-0 fw-normal" href="#">لوس آنجلس</a></li>
+                                <li class="nav-item mb-2 pb-1"><a class="nav-link p-0 fw-normal" href="#">کانادا</a></li>
+                                <li class="nav-item mb-2 pb-1"><a class="nav-link p-0 fw-normal" href="#">آرژانتین</a></li>
+                                <li class="nav-item mb-2 pb-1"><a class="nav-link p-0 fw-normal" href="#">فیلیپین</a></li>
+                                <li class="nav-item"><a class="nav-link p-0 fw-normal" href="#">شیکاگو</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="card card-hover border-0 shadow-sm h-100 p-2">
+                        <div class="card-body p-4"><img class="d-block rounded-3 mb-3" src="img/real-estate/locations/city.svg" width="80">
+                            <h4 class="h5 mb-2 ">موقعیت های شهری</h4><span class="fs-sm text-muted">طراحان خلاقی و فرهنگ پیشرو در زبان فارسی ایجاد کرد.</span>
+                            <hr class="my-4">
+                            <ul class="nav flex-column mb-0">
+                                <li class="nav-item mb-2 pb-1"><a class="nav-link p-0 fw-normal" href="#">سن فراسیسکو</a></li>
+                                <li class="nav-item mb-2 pb-1"><a class="nav-link p-0 fw-normal" href="#">آمستردام</a></li>
+                                <li class="nav-item mb-2 pb-1"><a class="nav-link p-0 fw-normal" href="#">دبی</a></li>
+                                <li class="nav-item mb-2 pb-1"><a class="nav-link p-0 fw-normal" href="#">مکزیک</a></li>
+                                <li class="nav-item mb-2 pb-1"><a class="nav-link p-0 fw-normal" href="#">چین</a></li>
+                                <li class="nav-item"><a class="nav-link p-0 fw-normal" href="#">پاریس</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="card card-hover border-0 shadow-sm h-100 p-2">
+                        <div class="card-body p-4"><img class="d-block rounded-3 mb-3" src="img/real-estate/locations/field.svg" width="80">
+                            <h4 class="h5 mb-2 ">موقعیت های ویژه</h4><span class="fs-sm text-muted">صنعت چاپ و با استفاده از طراحان گرافیک است.</span>
+                            <hr class="my-4">
+                            <ul class="nav flex-column mb-0">
+                                <li class="nav-item mb-2 pb-1"><a class="nav-link p-0 fw-normal" href="#">استرالیا</a></li>
+                                <li class="nav-item mb-2 pb-1"><a class="nav-link p-0 fw-normal" href="#">شیکاگو</a></li>
+                                <li class="nav-item mb-2 pb-1"><a class="nav-link p-0 fw-normal" href="#">آلمان</a></li>
+                                <li class="nav-item mb-2 pb-1"><a class="nav-link p-0 fw-normal" href="#">کالیفرنیا</a></li>
+                                <li class="nav-item mb-2 pb-1"><a class="nav-link p-0 fw-normal" href="#">آمریکا</a></li>
+                                <li class="nav-item"><a class="nav-link p-0 fw-normal" href="#">مجارستان</a></li>
+                            </ul>
+                        </div>
                     </div>
                 </div>
             </div>
-
-            <div class="row">
-                <div class="col-lg-12 col-md-12">
-                    <div class="item-slide space">
-
-                        <!-- Single Item -->
-                        <div class="single_items">
-                            <div class="grid_agents">
-                                <div class="elio_mx_list theme-bg-2">102 ملک</div>
-                                <div class="grid_agents-wrap">
-
-                                    <div class="fr-grid-thumb">
-                                        <a href="agent-page.html">
-                                            <span class="verified"><img src="assets/img/verified.svg" class="verify mx-auto" alt=""></span>
-                                            <img src="assets/img/team-1.jpg" class="img-fluid mx-auto" alt="">
-                                        </a>
-                                    </div>
-
-                                    <div class="fr-grid-deatil">
-                                        <span><i class="ti-location-pin ml-1"></i>ایران ، اصفهان</span>
-                                        <h5 class="fr-can-name"><a href="agent-page.html">مهدی رمضانی</a></h5>
-                                        <ul class="inline_social">
-                                            <li><a href="#" class="fb"><i class="ti-facebook"></i></a></li>
-                                            <li><a href="#" class="ln"><i class="ti-linkedin"></i></a></li>
-                                            <li><a href="#" class="ins"><i class="ti-instagram"></i></a></li>
-                                            <li><a href="#" class="tw"><i class="ti-twitter"></i></a></li>
-                                        </ul>
-                                    </div>
-
-                                    <div class="fr-infos-deatil">
-                                        <a href="#"  data-toggle="modal" data-target="#autho-message" class="btn agent-btn theme-bg"><i class="fa fa-envelope ml-2"></i>ارسال پیام</a>
-                                        <a href="#" class="btn agent-btn theme-black"><i class="fa fa-phone"></i></a>
-                                    </div>
-
-                                </div>
-
-                            </div>
-                        </div>
-
-                        <!-- Single Item -->
-                        <div class="single_items">
-                            <div class="grid_agents">
-                                <div class="elio_mx_list theme-bg-2">72 ملک</div>
-                                <div class="grid_agents-wrap">
-
-                                    <div class="fr-grid-thumb">
-                                        <a href="agent-page.html">
-                                            <span class="verified"><img src="assets/img/verified.svg" class="verify mx-auto" alt=""></span>
-                                            <img src="assets/img/team-2.jpg" class="img-fluid mx-auto" alt="">
-                                        </a>
-                                    </div>
-
-                                    <div class="fr-grid-deatil">
-                                        <span><i class="ti-location-pin ml-1"></i>ایران ، اصفهان</span>
-                                        <h5 class="fr-can-name"><a href="agent-page.html">لیلا یوسفی</a></h5>
-                                        <ul class="inline_social">
-                                            <li><a href="#" class="fb"><i class="ti-facebook"></i></a></li>
-                                            <li><a href="#" class="ln"><i class="ti-linkedin"></i></a></li>
-                                            <li><a href="#" class="ins"><i class="ti-instagram"></i></a></li>
-                                            <li><a href="#" class="tw"><i class="ti-twitter"></i></a></li>
-                                        </ul>
-                                    </div>
-
-                                    <div class="fr-infos-deatil">
-                                        <a href="#"  data-toggle="modal" data-target="#autho-message" class="btn agent-btn theme-bg"><i class="fa fa-envelope ml-2"></i>ارسال پیام</a>
-                                        <a href="#" class="btn agent-btn theme-black"><i class="fa fa-phone"></i></a>
-                                    </div>
-
-                                </div>
-
-                            </div>
-                        </div>
-
-                        <!-- Single Item -->
-                        <div class="single_items">
-                            <div class="grid_agents">
-                                <div class="elio_mx_list theme-bg-2">22 ملک</div>
-                                <div class="grid_agents-wrap">
-
-                                    <div class="fr-grid-thumb">
-                                        <a href="agent-page.html">
-                                            <span class="verified"><img src="assets/img/verified.svg" class="verify mx-auto" alt=""></span>
-                                            <img src="assets/img/team-3.jpg" class="img-fluid mx-auto" alt="">
-                                        </a>
-                                    </div>
-
-                                    <div class="fr-grid-deatil">
-                                        <span><i class="ti-location-pin ml-1"></i>ایران ، اصفهان</span>
-                                        <h5 class="fr-can-name"><a href="agent-page.html">بهمن رضایی</a></h5>
-                                        <ul class="inline_social">
-                                            <li><a href="#" class="fb"><i class="ti-facebook"></i></a></li>
-                                            <li><a href="#" class="ln"><i class="ti-linkedin"></i></a></li>
-                                            <li><a href="#" class="ins"><i class="ti-instagram"></i></a></li>
-                                            <li><a href="#" class="tw"><i class="ti-twitter"></i></a></li>
-                                        </ul>
-                                    </div>
-
-                                    <div class="fr-infos-deatil">
-                                        <a href="#"  data-toggle="modal" data-target="#autho-message" class="btn agent-btn theme-bg"><i class="fa fa-envelope ml-2"></i>ارسال پیام</a>
-                                        <a href="#" class="btn agent-btn theme-black"><i class="fa fa-phone"></i></a>
-                                    </div>
-
-                                </div>
-
-                            </div>
-                        </div>
-
-                        <!-- Single Item -->
-                        <div class="single_items">
-                            <div class="grid_agents">
-                                <div class="elio_mx_list theme-bg-2">50 ملک</div>
-                                <div class="grid_agents-wrap">
-
-                                    <div class="fr-grid-thumb">
-                                        <a href="agent-page.html">
-                                            <span class="verified"><img src="assets/img/verified.svg" class="verify mx-auto" alt=""></span>
-                                            <img src="assets/img/team-4.jpg" class="img-fluid mx-auto" alt="">
-                                        </a>
-                                    </div>
-
-                                    <div class="fr-grid-deatil">
-                                        <span><i class="ti-location-pin ml-1"></i>ایران ، اصفهان</span>
-                                        <h5 class="fr-can-name"><a href="agent-page.html">مریم معصومی</a></h5>
-                                        <ul class="inline_social">
-                                            <li><a href="#" class="fb"><i class="ti-facebook"></i></a></li>
-                                            <li><a href="#" class="ln"><i class="ti-linkedin"></i></a></li>
-                                            <li><a href="#" class="ins"><i class="ti-instagram"></i></a></li>
-                                            <li><a href="#" class="tw"><i class="ti-twitter"></i></a></li>
-                                        </ul>
-                                    </div>
-
-                                    <div class="fr-infos-deatil">
-                                        <a href="#"  data-toggle="modal" data-target="#autho-message" class="btn agent-btn theme-bg"><i class="fa fa-envelope ml-2"></i>ارسال پیام</a>
-                                        <a href="#" class="btn agent-btn theme-black"><i class="fa fa-phone"></i></a>
-                                    </div>
-
-                                </div>
-
-                            </div>
-                        </div>
-
-                        <!-- Single Item -->
-                        <div class="single_items">
-                            <div class="grid_agents">
-                                <div class="elio_mx_list theme-bg-2">42 ملک</div>
-                                <div class="grid_agents-wrap">
-
-                                    <div class="fr-grid-thumb">
-                                        <a href="agent-page.html">
-                                            <span class="verified"><img src="assets/img/verified.svg" class="verify mx-auto" alt=""></span>
-                                            <img src="assets/img/team-5.jpg" class="img-fluid mx-auto" alt="">
-                                        </a>
-                                    </div>
-
-                                    <div class="fr-grid-deatil">
-                                        <span><i class="ti-location-pin ml-1"></i>ایران ، اصفهان</span>
-                                        <h5 class="fr-can-name"><a href="agent-page.html">محمود قلی زاده</a></h5>
-                                        <ul class="inline_social">
-                                            <li><a href="#" class="fb"><i class="ti-facebook"></i></a></li>
-                                            <li><a href="#" class="ln"><i class="ti-linkedin"></i></a></li>
-                                            <li><a href="#" class="ins"><i class="ti-instagram"></i></a></li>
-                                            <li><a href="#" class="tw"><i class="ti-twitter"></i></a></li>
-                                        </ul>
-                                    </div>
-
-                                    <div class="fr-infos-deatil">
-                                        <a href="#"  data-toggle="modal" data-target="#autho-message" class="btn agent-btn theme-bg"><i class="fa fa-envelope ml-2"></i>ارسال پیام</a>
-                                        <a href="#" class="btn agent-btn theme-black"><i class="fa fa-phone"></i></a>
-                                    </div>
-
-                                </div>
-
-                            </div>
-                        </div>
-
-                    </div>
-                </div>
-            </div>
-
         </div>
     </section>
-    <!-- ============================ Top Agents End ================================== -->
-
-    <!-- ============================ Property By Location ================================== -->
-    <section class="min">
-        <div class="container">
-
-            <div class="row justify-content-center">
-                <div class="col-lg-7 col-md-8">
-                    <div class="sec-heading center">
-                        <h2>برترین مکان های ملکی</h2>
-                        <p>لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ و با استفاده از طراحان گرافیک است. چاپگرها و متون بلکه روزنامه و مجله در ستون و سطرآنچنان.</p>
+    <!-- Top properties-->
+    <section class="container-fluid px-xxl-4 mb-5 pb-lg-4">
+        <h2 class="h3 mb-4 pb-2 text-center ">جدیدترین املاک</h2>
+        <!-- Carousel-->
+        <div class="tns-carousel-wrapper tns-nav-outside tns-nav-outside-flush mx-n2">
+            <div class="tns-carousel-inner row gx-4 mx-0" data-carousel-options="{&quot;nav&quot;: false, &quot;autoHeight&quot;: true, &quot;controlsContainer&quot;: &quot;#carousel-controls-tp&quot;, &quot;responsive&quot;: {&quot;0&quot;:{&quot;items&quot;:1},&quot;1320&quot;:{&quot;items&quot;:2}}}">
+                <!-- Carousel item-->
+                <div class="col">
+                    <div class="row gy-md-0 gy-sm-4 gy-3 gx-sm-4 gx-0">
+                        <div class="col-md-7"><a class="text-decoration-none text-light card bg-size-cover bg-position-center border-0 overflow-hidden h-100" href="real-estate-single-v1-v1.html" style="background-image: url(img/real-estate/top-properties/01.jpg); min-height: 18.75rem;"><span class="img-gradient-overlay"></span>
+                                <div class="card-body content-overlay pb-0"></div>
+                                <div class="card-footer content-overlay border-0 pt-0 pb-4">
+                                    <div class="d-sm-flex justify-content-between align-items-end pt-5 mt-2 mt-sm-5">
+                                        <div class="pe-2">
+                                            <div class="fs-sm text-uppercase pt-2 mb-1">فروش</div>
+                                            <h3 class="h5 text-light mb-1">ویلا لوکس با گاراژ</h3>
+                                            <div class="fs-sm opacity-70"><i class="fi-map-pin ms-1"></i>تهران، زعفرانیه، خیابان صدف، مجتمع نیلوفر شرقی</div>
+                                        </div>
+                                    </div>
+                                </div></a></div>
+                        <div class="col-md-5"><a class="card border-0 overflow-hidden mb-sm-4 mb-3 text-decoration-none text-light" href="real-estate-single-v1-v2.html">
+                                <div class="card-body p-0 position-relative"><img src="img/real-estate/top-properties/02.jpg" alt="Article image"><span class="img-gradient-overlay zindex-1"></span>
+                                    <div class="position-absolute start-0 bottom-0 m-n1 p-4 zindex-5">
+                                        <div class="fs-sm text-uppercase pt-2 mb-1">اجاره</div>
+                                        <h3 class="h5 text-light mb-1">آپارتمان مدرن استخردار</h3>
+                                        <div class="fs-sm opacity-70"><i class="fi-map-pin ms-1"></i>مشهد، خیابان سجاد، کوچه اقاقیا طبقه 8</div>
+                                    </div>
+                                </div></a><a class="card border-0 overflow-hidden text-decoration-none text-light" href="real-estate-single-v1-v2.html">
+                                <div class="card-body p-0 position-relative"><img src="img/real-estate/top-properties/03.jpg" alt="Article image"><span class="img-gradient-overlay zindex-1"></span>
+                                    <div class="position-absolute start-0 bottom-0 m-n1 p-4 zindex-5">
+                                        <div class="fs-sm text-uppercase pt-2 mb-1">فروش</div>
+                                        <h3 class="h5 text-light mb-1">خانه دوبلکس</h3>
+                                        <div class="fs-sm opacity-70"><i class="fi-map-pin ms-1"></i>تهران، الهیه، نبش خیابان کاج غربی</div>
+                                    </div>
+                                </div></a></div>
+                    </div>
+                </div>
+                <!-- Carousel item-->
+                <div class="col">
+                    <div class="row gy-md-0 gy-sm-4 gy-3 gx-sm-4 gx-0">
+                        <div class="col-md-7"><a class="text-decoration-none text-light card bg-size-cover bg-position-center border-0 overflow-hidden h-100" href="real-estate-single-v1-v1.html" style="background-image: url(img/real-estate/top-properties/04.jpg); min-height: 18.75rem;"><span class="img-gradient-overlay"></span>
+                                <div class="card-body content-overlay pb-0"></div>
+                                <div class="card-footer content-overlay border-0 pt-0 pb-4">
+                                    <div class="d-sm-flex justify-content-between align-items-end pt-5 mt-2 mt-sm-5">
+                                        <div class="pe-2">
+                                            <div class="fs-sm text-uppercase pt-2 mb-1">اجاره</div>
+                                            <h3 class="h5 text-light mb-1">آپارتمان 2 خوابه</h3>
+                                            <div class="fs-sm opacity-70"><i class="fi-map-pin ms-1"></i>بزرگراه نواب، خیابان صفدری، خیابان محبوب مجاز شرقی</div>
+                                        </div>
+                                    </div>
+                                </div></a></div>
+                        <div class="col-md-5"><a class="card border-0 overflow-hidden mb-sm-4 mb-3 text-decoration-none text-light" href="real-estate-single-v1-v2.html">
+                                <div class="card-body p-0 position-relative"><img src="img/real-estate/top-properties/05.jpg" alt="Article image"><span class="img-gradient-overlay zindex-1"></span>
+                                    <div class="position-absolute start-0 bottom-0 m-n1 p-4 zindex-5">
+                                        <div class="fs-sm text-uppercase pt-2 mb-1">فروش</div>
+                                        <h3 class="h5 text-light mb-1">خانه حیاط دار</h3>
+                                        <div class="fs-sm opacity-70"><i class="fi-map-pin ms-1"></i>سیدخندان، 100متر بالاتر از مترو شریعتی</div>
+                                    </div>
+                                </div></a><a class="card border-0 overflow-hidden text-decoration-none text-light" href="real-estate-single-v1-v2.html">
+                                <div class="card-body p-0 position-relative"><img src="img/real-estate/top-properties/06.jpg" alt="Article image"><span class="img-gradient-overlay zindex-1"></span>
+                                    <div class="position-absolute start-0 bottom-0 m-n1 p-4 zindex-5">
+                                        <div class="fs-sm text-uppercase pt-2 mb-1">فروش</div>
+                                        <h3 class="h5 text-light mb-1">ویلا 2 طبقه | 150 متر مربع</h3>
+                                        <div class="fs-sm opacity-70"><i class="fi-map-pin ms-1"></i>شمال، خیابان شادمان بن بست شکوفه</div>
+                                    </div>
+                                </div></a></div>
+                    </div>
+                </div>
+                <!-- Carousel item-->
+                <div class="col">
+                    <div class="row gy-md-0 gy-sm-4 gy-3 gx-sm-4 gx-0">
+                        <div class="col-md-7"><a class="text-decoration-none text-light card bg-size-cover bg-position-center border-0 overflow-hidden h-100" href="real-estate-single-v1-v1.html" style="background-image: url(img/real-estate/top-properties/07.jpg); min-height: 18.75rem;"><span class="img-gradient-overlay"></span>
+                                <div class="card-body content-overlay pb-0"></div>
+                                <div class="card-footer content-overlay border-0 pt-0 pb-4">
+                                    <div class="d-sm-flex justify-content-between align-items-end pt-5 mt-2 mt-sm-5">
+                                        <div class="pe-2">
+                                            <div class="fs-sm text-uppercase pt-2 mb-1">فروش</div>
+                                            <h3 class="h5 text-light mb-1">ویلا 2 طبقه | 150 متر مربع</h3>
+                                            <div class="fs-sm opacity-70"><i class="fi-map-pin ms-1"></i>شمال، خیابان شادمان بن بست شکوفه</div>
+                                        </div>
+                                    </div>
+                                </div></a></div>
+                        <div class="col-md-5"><a class="card border-0 overflow-hidden mb-sm-4 mb-3 text-decoration-none text-light" href="real-estate-single-v1-v2.html">
+                                <div class="card-body p-0 position-relative"><img src="img/real-estate/top-properties/08.jpg" alt="Article image"><span class="img-gradient-overlay zindex-1"></span>
+                                    <div class="position-absolute start-0 bottom-0 m-n1 p-4 zindex-5">
+                                        <div class="fs-sm text-uppercase pt-2 mb-1">فروش</div>
+                                        <h3 class="h5 text-light mb-1">خانه حیاط دار</h3>
+                                        <div class="fs-sm opacity-70"><i class="fi-map-pin ms-1"></i>سیدخندان، 100متر بالاتر از مترو شریعتی</div>
+                                    </div>
+                                </div></a><a class="card border-0 overflow-hidden text-decoration-none text-light" href="real-estate-single-v1-v2.html">
+                                <div class="card-body p-0 position-relative"><img src="img/real-estate/top-properties/09.jpg" alt="Article image"><span class="img-gradient-overlay zindex-1"></span>
+                                    <div class="position-absolute start-0 bottom-0 m-n1 p-4 zindex-5">
+                                        <div class="fs-sm text-uppercase pt-2 mb-1">اجاره</div>
+                                        <h3 class="h5 text-light mb-1">آپارتمان 2 خوابه</h3>
+                                        <div class="fs-sm opacity-70"><i class="fi-map-pin ms-1"></i>بزرگراه نواب، خیابان صفدری، خیابان محبوب مجاز شرقی</div>
+                                    </div>
+                                </div></a></div>
                     </div>
                 </div>
             </div>
-
-            <div class="row justify-content-center">
-                <div class="col-lg-4 col-md-4 col-sm-6">
-                    <a href="grid-layout-with-sidebar.html" class="img-wrap">
-                        <div class="location_wrap_content visible">
-                            <div class="location_wrap_content_first">
-                                <h4>رشت</h4>
-                                <span>48 ملک</span>
-                            </div>
-                            <div class="location_btn"><i class="fa fa-arrow-left"></i></div>
-                        </div>
-                        <div class="img-wrap-background" style="background-image: url(assets/img/city-6.png);"></div>
-                    </a>
-                </div>
-
-                <div class="col-lg-4 col-md-4 col-sm-6">
-                    <a href="grid-layout-with-sidebar.html" class="img-wrap">
-                        <div class="location_wrap_content visible">
-                            <div class="location_wrap_content_first">
-                                <h4>ایران , تهران</h4>
-                                <span>73 ملک</span>
-                            </div>
-                            <div class="location_btn"><i class="fa fa-arrow-left"></i></div>
-                        </div>
-                        <div class="img-wrap-background" style="background-image: url(assets/img/city-7.png);"></div>
-                    </a>
-                </div>
-
-                <div class="col-lg-4 col-md-4 col-sm-6">
-                    <a href="grid-layout-with-sidebar.html" class="img-wrap">
-                        <div class="location_wrap_content visible">
-                            <div class="location_wrap_content_first">
-                                <h4>ایران , کرج</h4>
-                                <span>40 ملک</span>
-                            </div>
-                            <div class="location_btn"><i class="fa fa-arrow-left"></i></div>
-                        </div>
-                        <div class="img-wrap-background" style="background-image: url(assets/img/city-3.png);"></div>
-                    </a>
-                </div>
-
-                <div class="col-lg-6 col-md-6 col-sm-6">
-                    <a href="grid-layout-with-sidebar.html" class="img-wrap">
-                        <div class="location_wrap_content visible">
-                            <div class="location_wrap_content_first">
-                                <h4>تبریز</h4>
-                                <span>35 ملک</span>
-                            </div>
-                            <div class="location_btn"><i class="fa fa-arrow-left"></i></div>
-                        </div>
-                        <div class="img-wrap-background" style="background-image: url(assets/img/city-4.png);"></div>
-                    </a>
-                </div>
-
-                <div class="col-lg-6 col-md-6 col-sm-6">
-                    <a href="grid-layout-with-sidebar.html" class="img-wrap">
-                        <div class="location_wrap_content visible">
-                            <div class="location_wrap_content_first">
-                                <h4>تهران, کرج</h4>
-                                <span>10 ملک</span>
-                            </div>
-                            <div class="location_btn"><i class="fa fa-arrow-left"></i></div>
-                        </div>
-                        <div class="img-wrap-background" style="background-image: url(assets/img/city-5.png);"></div>
-                    </a>
-                </div>
-
-            </div>
-
+        </div>
+        <!-- Carousel custom controls-->
+        <div class="tns-carousel-controls justify-content-center pt-md-2 mt-4" id="carousel-controls-tp">
+            <button class="me-3" type="button"><i class="fi-chevron-left fs-xs"></i></button>
+            <button type="button"><i class="fi-chevron-right fs-xs"></i></button>
         </div>
     </section>
-    <!-- ============================ Property By Location End ================================== -->
-
-    <!-- ============================ Smart Testimonials ================================== -->
-    <section class="gray-simple">
-        <div class="container">
-
-            <div class="row justify-content-center">
-                <div class="col-lg-7 col-md-8">
-                    <div class="sec-heading center">
-                        <h2>نظرات خوب توسط مشتریان</h2>
-                        <p>لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ و با استفاده از طراحان گرافیک است. چاپگرها و متون بلکه روزنامه و مجله در ستون و سطرآنچنان که لازم است.</p>
-                    </div>
-                </div>
+    <!-- Find your agent-->
+    <section class="container mb-5 pb-lg-5 pb-md-4">
+        <div class="card py-lg-5 py-4 border-0 bg-secondary">
+            <div class="card-body p-4 text-center">
+                <h2 class="">مشاوران املاک</h2>
+                <p class="mx-auto mb-md-5 mb-4 pb-lg-3" style="max-width: 53.125rem;">ما جامع ترین دایرکتوری مشاورین املاک را داریم تا به شما در رفع تمام نیازهای املاکتان کمک کنیم. چه خرید، فروش یا اجاره، جستجوی خود را برای یافتن تخصص محلی مناسب شروع کنید.</p>
+                <!-- Agent ava's-->
+                <div class="d-flex align-items-center justify-content-center flex-wrap mb-md-5 mb-4 pb-lg-3 ps-3 pt-4">
+                    <div class="border border-5 border-white rounded-circle bg-white ms-n3 mt-n4"><img class="rounded-circle" src="img/avatars/39.jpg" width="110" alt="Avatar"></div>
+                    <div class="border border-5 border-white rounded-circle bg-white ms-n3 mt-n4"><img class="rounded-circle" src="img/avatars/40.jpg" width="110" alt="Avatar"></div>
+                    <div class="border border-5 border-white rounded-circle bg-white ms-n3 mt-n4"><img class="rounded-circle" src="img/avatars/41.jpg" width="110" alt="Avatar"></div>
+                    <div class="border border-5 border-white rounded-circle bg-white ms-n3 mt-n4"><img class="rounded-circle" src="img/avatars/42.jpg" width="110" alt="Avatar"></div>
+                    <div class="border border-5 border-white rounded-circle bg-white ms-n3 mt-n4"><img class="rounded-circle" src="img/avatars/43.jpg" width="110" alt="Avatar"></div>
+                    <div class="border border-5 border-white rounded-circle bg-white ms-n3 mt-n4"><img class="rounded-circle" src="img/avatars/44.jpg" width="110" alt="Avatar"></div>
+                    <div class="border border-5 border-white rounded-circle bg-white ms-n3 mt-n4"><img class="rounded-circle" src="img/avatars/45.jpg" width="110" alt="Avatar"></div>
+                    <div class="border border-5 border-white rounded-circle bg-white ms-n3 mt-n4"><img class="rounded-circle" src="img/avatars/46.jpg" width="110" alt="Avatar"></div>
+                    <div class="border border-5 border-white rounded-circle bg-white ms-n3 mt-n4"><img class="rounded-circle" src="img/avatars/47.jpg" width="110" alt="Avatar"></div>
+                    <div class="border border-5 border-white rounded-circle bg-white ms-n3 mt-n4"><img class="rounded-circle" src="img/avatars/48.jpg" width="110" alt="Avatar"></div>
+                    <div class="border border-5 border-white rounded-circle bg-white ms-n3 mt-n4"><img class="rounded-circle" src="img/avatars/49.jpg" width="110" alt="Avatar"></div>
+                </div><a class="btn btn-lg btn-primary w-sm-auto w-100" href="#">یافتن مشاوره ملک<i class="fi-chevron-right ms-2"></i></a>
             </div>
-
-            <div class="row">
-                <div class="col-lg-12 col-md-12">
-                    <div class="item-slide space">
-
-                        <!-- Single Item -->
-                        <div class="single_items">
-                            <div class="_testimonial_wrios">
-                                <div class="_testimonial_flex">
-                                    <div class="_testimonial_flex_first">
-                                        <div class="_tsl_flex_thumb">
-                                            <img src="assets/img/user-1.jpg" class="img-fluid" alt="">
-                                        </div>
-                                        <div class="_tsl_flex_capst">
-                                            <h5>مهدی رمضانی</h5>
-                                            <div class="_ovr_posts"><span>مدیر عامل</span></div>
-                                            <div class="_ovr_rates"><span><i class="fa fa-star"></i></span>4.7</div>
-                                        </div>
-                                    </div>
-                                    <div class="_testimonial_flex_first_last">
-                                        <div class="_tsl_flex_thumb">
-                                            <img src="assets/img/c-1.png" class="img-fluid" alt="">
-                                        </div>
-                                    </div>
-                                </div>
-
-                                <div class="facts-detail">
-                                    <p>لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ و با استفاده از طراحان گرافیک است. چاپگرها و متون بلکه روزنامه و مجله.</p>
-                                </div>
-                            </div>
-                        </div>
-
-                        <!-- Single Item -->
-                        <div class="single_items">
-                            <div class="_testimonial_wrios">
-                                <div class="_testimonial_flex">
-                                    <div class="_testimonial_flex_first">
-                                        <div class="_tsl_flex_thumb">
-                                            <img src="assets/img/user-2.jpg" class="img-fluid" alt="">
-                                        </div>
-                                        <div class="_tsl_flex_capst">
-                                            <h5>مریم معصومی</h5>
-                                            <div class="_ovr_posts"><span>مدیرعامل اپل</span></div>
-                                            <div class="_ovr_rates"><span><i class="fa fa-star"></i></span>4.5</div>
-                                        </div>
-                                    </div>
-                                    <div class="_testimonial_flex_first_last">
-                                        <div class="_tsl_flex_thumb">
-                                            <img src="assets/img/c-2.png" class="img-fluid" alt="">
-                                        </div>
-                                    </div>
-                                </div>
-
-                                <div class="facts-detail">
-                                    <p>لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ و با استفاده از طراحان گرافیک است. چاپگرها و متون بلکه روزنامه و مجله.</p>
-                                </div>
-                            </div>
-                        </div>
-
-                        <!-- Single Item -->
-                        <div class="single_items">
-                            <div class="_testimonial_wrios">
-                                <div class="_testimonial_flex">
-                                    <div class="_testimonial_flex_first">
-                                        <div class="_tsl_flex_thumb">
-                                            <img src="assets/img/user-3.jpg" class="img-fluid" alt="">
-                                        </div>
-                                        <div class="_tsl_flex_capst">
-                                            <h5>محمود قلی زاده</h5>
-                                            <div class="_ovr_posts"><span>مدیرعامل گوگل</span></div>
-                                            <div class="_ovr_rates"><span><i class="fa fa-star"></i></span>4.9</div>
-                                        </div>
-                                    </div>
-                                    <div class="_testimonial_flex_first_last">
-                                        <div class="_tsl_flex_thumb">
-                                            <img src="assets/img/c-3.png" class="img-fluid" alt="">
-                                        </div>
-                                    </div>
-                                </div>
-
-                                <div class="facts-detail">
-                                    <p>لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ و با استفاده از طراحان گرافیک است. چاپگرها و متون بلکه روزنامه و مجله.</p>
-                                </div>
-                            </div>
-                        </div>
-
-                        <!-- Single Item -->
-                        <div class="single_items">
-                            <div class="_testimonial_wrios">
-                                <div class="_testimonial_flex">
-                                    <div class="_testimonial_flex_first">
-                                        <div class="_tsl_flex_thumb">
-                                            <img src="assets/img/user-4.jpg" class="img-fluid" alt="">
-                                        </div>
-                                        <div class="_tsl_flex_capst">
-                                            <h5>لیلا یوسفی</h5>
-                                            <div class="_ovr_posts"><span>مدیر لینکدین</span></div>
-                                            <div class="_ovr_rates"><span><i class="fa fa-star"></i></span>4.7</div>
-                                        </div>
-                                    </div>
-                                    <div class="_testimonial_flex_first_last">
-                                        <div class="_tsl_flex_thumb">
-                                            <img src="assets/img/c-4.png" class="img-fluid" alt="">
-                                        </div>
-                                    </div>
-                                </div>
-
-                                <div class="facts-detail">
-                                    <p>لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ و با استفاده از طراحان گرافیک است. چاپگرها و متون بلکه روزنامه و مجله.</p>
-                                </div>
-                            </div>
-                        </div>
-
-                        <!-- Single Item -->
-                        <div class="single_items">
-                            <div class="_testimonial_wrios">
-                                <div class="_testimonial_flex">
-                                    <div class="_testimonial_flex_first">
-                                        <div class="_tsl_flex_thumb">
-                                            <img src="assets/img/user-5.jpg" class="img-fluid" alt="">
-                                        </div>
-                                        <div class="_tsl_flex_capst">
-                                            <h5>اکبر مهتابی</h5>
-                                            <div class="_ovr_posts"><span>مدیر عامل</span></div>
-                                            <div class="_ovr_rates"><span><i class="fa fa-star"></i></span>4.7</div>
-                                        </div>
-                                    </div>
-                                    <div class="_testimonial_flex_first_last">
-                                        <div class="_tsl_flex_thumb">
-                                            <img src="assets/img/c-5.png" class="img-fluid" alt="">
-                                        </div>
-                                    </div>
-                                </div>
-
-                                <div class="facts-detail">
-                                    <p>لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ و با استفاده از طراحان گرافیک است. چاپگرها و متون بلکه روزنامه و مجله.</p>
-                                </div>
-                            </div>
-                        </div>
-
-                    </div>
-                </div>
-            </div>
-
         </div>
     </section>
-    <!-- ============================ Smart Testimonials End ================================== -->
-
-    <!-- ============================ article Start ================================== -->
-    <section class="min">
-        <div class="container">
-
-            <div class="row justify-content-center">
-                <div class="col-lg-7 col-md-8">
-                    <div class="sec-heading center">
-                        <h2>آخرین اخبار و مقالات</h2>
-                        <p>لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ و با استفاده از طراحان گرافیک است. چاپگرها و متون بلکه روزنامه و مجله در ستون و سطرآنچنان که لازم است.</p>
+    <!-- Blog-->
+    <section class="container mb-5 pb-lg-5 pb-4">
+        <h2 class="h3 mb-4 pb-2 text-md-start text-center  ">آخرین مقالات املاک</h2>
+        <div class="row gy-5">
+            <div class="col-lg-7">
+                <!-- Post-->
+                <article class="card border-0 shadow-sm card-hover card-horizontal mb-4"><a class="card-img-top" href="#" style="background-image: url(img/real-estate/blog/05.jpg);"></a>
+                    <div class="card-body"><a class="fs-xs text-uppercase text-decoration-none" href="real-estate-blog-single.html">سبک زندگی</a>
+                        <h3 class="fs-base pt-1 mb-2"><a class="nav-link" href="real-estate-blog-single.html">5 پروژه جاه طلبانه آسان برای بهبود خانه شما</a></h3>
+                        <p class="fs-sm text-muted">ارائه راهکارها و شرایط سخت تایپ به پایان رسد وزمان مورد نیاز شامل حروفچینی دستاوردهای اصلی و جوابگوی سوالات پیوسته اهل دنیای... </p><a class="d-flex align-items-center text-decoration-none" href="#"><img class="rounded-circle" src="img/avatars/10.jpg" width="44" alt="Avatar">
+                            <div class="pe-2">
+                                <h6 class="fs-sm text-nav lh-base mb-1">آنت بلک</h6>
+                                <div class="d-flex text-body fs-xs"><span class="me-2 pe-1"><i class="fi-calendar-alt opacity-70 ms-1"></i>1 اردیبهشت</span><span><i class="fi-chat-circle opacity-70 ms-1"></i>1 دیدگاه</span></div>
+                            </div></a>
+                    </div>
+                </article>
+                <!-- Post-->
+                <article class="card border-0 shadow-sm card-hover card-horizontal mb-4"><a class="card-img-top" href="real-estate-blog-single.html" style="background-image: url(img/real-estate/blog/06.jpg);"></a>
+                    <div class="card-body"><a class="fs-xs text-uppercase text-decoration-none" href="#">نکات و ترفندها</a>
+                        <h3 class="fs-base pt-1 mb-2"><a class="nav-link" href="real-estate-blog-single.html">7 نکته برای دستیابی به حداکثر آرامش</a></h3>
+                        <p class="fs-sm text-muted">متخصصان را می طلبد تا با نرم افزارها شناخت بیشتری را برای طراحان رایانه ای علی الخصوص طراحان خلاقی و فرهنگ پیشرو ...</p><a class="d-flex align-items-center text-decoration-none" href="#"><img class="rounded-circle" src="img/avatars/08.jpg" width="44" alt="Avatar">
+                            <div class="pe-2">
+                                <h6 class="fs-sm text-nav lh-base mb-1">الهام کریمی</h6>
+                                <div class="d-flex text-body fs-xs"><span class="me-2 pe-1"><i class="fi-calendar-alt opacity-70 ms-1"></i>27 تیر</span><span><i class="fi-chat-circle opacity-70 ms-1"></i>3 دیدگاه</span></div>
+                            </div></a>
+                    </div>
+                </article>
+                <div class="pt-2"><a class="btn btn-lg btn-outline-primary w-sm-auto w-100" href="real-estate-blog.html">مقالات بیشتر</a></div>
+            </div>
+            <div class="col-1 d-lg-block d-none">
+                <hr class="hr-vertical mx-auto">
+            </div>
+            <div class="col-lg-4">
+                <div class="row row-cols-lg-1 row-cols-md-2 row-cols-1 gy-5 text-md-start text-center">
+                    <!-- Mail subscription-->
+                    <div class="col pb-lg-2">
+                        <h3 class="h5">عضویت در خبرنامه</h3>
+                        <p class="mb-4">برای دریافت آخرین اخبار و به روز رسانی های ما ایمیل خود را وارد کنید.</p>
+                        <form class="form-group mx-auto" style="max-width: 26rem;">
+                            <div class="input-group"><span class="input-group-text text-muted"><i class="fi-mail"></i></span>
+                                <input class="form-control" type="email" placeholder="ایمیل شما">
+                            </div>
+                            <button class="btn btn-primary" type="button">ثبت نام</button>
+                        </form>
+                    </div>
+                    <!-- Following-->
+                    <div class="col">
+                        <h3 class="h5">ما را نبال کنید</h3>
+                        <p class="mb-4">آخرین اخبار در مورد بازار مسکن را با عضویت در سایت دریافت کنید.</p>
+                        <div class="ms-n2 mt-n2"><a class="btn btn-icon btn-light-primary btn-xs shadow-sm rounded-circle ms-2 mt-2" href="#"><i class="fi-instagram"></i></a><a class="btn btn-icon btn-light-primary btn-xs shadow-sm rounded-circle ms-2 mt-2" href="#"><i class="fi-twitter"></i></a><a class="btn btn-icon btn-light-primary btn-xs shadow-sm rounded-circle ms-2 mt-2" href="#"><i class="fi-whatsapp"></i></a><a class="btn btn-icon btn-light-primary btn-xs shadow-sm rounded-circle ms-2 mt-2" href="#"><i class="fi-telegram"></i></a></div>
                     </div>
                 </div>
             </div>
-
-            <div class="row justify-content-center">
-
-                <!-- Single blog Grid -->
-                <div class="col-lg-4 col-md-6">
-                    <div class="grid_blog_box">
-
-                        <div class="gtid_blog_thumb">
-                            <a href="blog-detail.html"><img src="assets/img/b-1.jpg" class="img-fluid" alt="" /></a>
-                            <div class="gtid_blog_info"><span>12</span>اسفند 1400</div>
-                        </div>
-
-                        <div class="blog-body">
-                            <h4 class="bl-title"><a href="blog-detail.html">طرح های خلاقانه</a><span class="latest_new_post">جدید</span></h4>
-                            <p>لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ و با استفاده از طراحان. </p>
-                        </div>
-
-                        <div class="modern_property_footer">
-                            <div class="property-author">
-                                <div class="path-img"><a href="agent-page.html" tabindex="-1"><img src="assets/img/user-1.jpg" class="img-fluid" alt=""></a></div>
-                                <h5><a href="agent-page.html" tabindex="-1">بهمن رمضانی</a></h5>
-                            </div>
-                            <span class="article-pulish-date"><i class="ti-comment-alt ml-2"></i>202</span>
-                        </div>
-
-                    </div>
-                </div>
-
-                <!-- Single blog Grid -->
-                <div class="col-lg-4 col-md-6">
-                    <div class="grid_blog_box">
-
-                        <div class="gtid_blog_thumb">
-                            <a href="blog-detail.html"><img src="assets/img/b-5.jpg" class="img-fluid" alt="" /></a>
-                            <div class="gtid_blog_info"><span>15</span>خرداد 1400</div>
-                        </div>
-
-                        <div class="blog-body">
-                            <h4 class="bl-title"><a href="blog-detail.html">توسعه دهنده UX/UI</a><span class="latest_new_post hot">ویژه</span></h4>
-                            <p>لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ و با استفاده از طراحان. </p>
-                        </div>
-
-                        <div class="modern_property_footer">
-                            <div class="property-author">
-                                <div class="path-img"><a href="agent-page.html" tabindex="-1"><img src="assets/img/user-2.jpg" class="img-fluid" alt=""></a></div>
-                                <h5><a href="agent-page.html" tabindex="-1">الناز روستایی</a></h5>
-                            </div>
-                            <span class="article-pulish-date"><i class="ti-comment-alt ml-2"></i>407</span>
-                        </div>
-
-                    </div>
-                </div>
-
-                <!-- Single blog Grid -->
-                <div class="col-lg-4 col-md-6">
-                    <div class="grid_blog_box">
-
-                        <div class="gtid_blog_thumb">
-                            <a href="blog-detail.html"><img src="assets/img/b-6.jpg" class="img-fluid" alt="" /></a>
-                            <div class="gtid_blog_info"><span>27</span>فروردین 1400</div>
-                        </div>
-
-                        <div class="blog-body">
-                            <h4 class="bl-title"><a href="blog-detail.html">توسعه دهنده وردپرس</a><span class="latest_new_post">جدید</span></h4>
-                            <p>لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ و با استفاده از طراحان. </p>
-                        </div>
-
-                        <div class="modern_property_footer">
-                            <div class="property-author">
-                                <div class="path-img"><a href="agent-page.html" tabindex="-1"><img src="assets/img/user-3.jpg" class="img-fluid" alt=""></a></div>
-                                <h5><a href="agent-page.html" tabindex="-1">سعید شمس</a></h5>
-                            </div>
-                            <span class="article-pulish-date"><i class="ti-comment-alt ml-2"></i>410</span>
-                        </div>
-
-                    </div>
-                </div>
-
-            </div>
-
         </div>
     </section>
-    <div class="clearfix"></div>
-    <!-- ============================ article End ================================== -->
-
-    <!-- ============================ Call To Action ================================== -->
-    <section class="theme-bg call_action_wrap-wrap">
-        <div class="container">
-            <div class="row">
-                <div class="col-lg-12">
-
-                    <div class="call_action_wrap">
-                        <div class="call_action_wrap-head">
-                            <h3>آیا سوالی دارید؟</h3>
-                            <span>ما به شما کمک می کنیم تا شغل و پیشرفت خود را افزایش دهید.</span>
-                        </div>
-                        <a href="#" class="btn btn-call_action_wrap">امروز با ما تماس بگیرید</a>
+    <!-- Links-->
+    <section class="container mb-5 pb-lg-5">
+        <div class="row row-cols-md-3 row-cols-1 gy-3">
+            <!-- Calculate property cost-->
+            <div class="col">
+                <div class="card card-hover h-100 border-0 bg-faded-warning position-relative">
+                    <div class="card-body pb-2">
+                        <h5 class="mb-2 pb-1 ">محاسبه ارزش ملک</h5>
+                        <p class="mb-0">ما می توانیم اجاره تقریبی شما را محاسبه کنیم.</p>
                     </div>
-
+                    <div class="card-footer py-1 border-0"><a class="stretched-link btn btn-link mb-3 px-0 text-warning" href="#cost-calculator" data-bs-toggle="modal">محاسبه</a></div>
+                </div>
+            </div>
+            <!-- Help center link-->
+            <div class="col">
+                <div class="card card-hover h-100 border-0 bg-faded-accent position-relative">
+                    <div class="card-body pb-2">
+                        <h5 class="mb-2 pb-1 ">دیدن از مرکز پشتیبانی</h5>
+                        <p class="mb-0">در اینجا می توانید سوالات متداول را پیدا کنید.</p>
+                    </div>
+                    <div class="card-footer py-1 border-0"><a class="stretched-link btn btn-link mb-3 px-0 text-accent" href="real-estate-help-center.html">بیشتر بخوانید</a></div>
+                </div>
+            </div>
+            <!-- How it works link-->
+            <div class="col">
+                <div class="card card-hover h-100 border-0 bg-faded-success position-relative">
+                    <div class="card-body pb-2">
+                        <h5 class="mb-2 pb-1 ">آشنایی با نحوه فعالیت</h5>
+                        <p class="mb-0">در اینجا یک راهنمای گام به گام برای اجاره کنندگان است.</p>
+                    </div>
+                    <div class="card-footer py-1 border-0"><a class="stretched-link btn btn-link mb-3 px-0 text-success" href="real-estate-about.html">شروع کنید</a></div>
                 </div>
             </div>
         </div>

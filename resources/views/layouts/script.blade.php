@@ -1,12 +1,9 @@
-<script src="{{asset('/assets/js/jquery.min.js')}}"></script>
-<script src="{{asset('/assets/js/popper.min.js')}}"></script>
-<script src="{{asset('/assets/js/bootstrap.min.js')}}"></script>
-<script src="{{asset('/assets/js/ion.rangeSlider.min.js')}}"></script>
-<script src="{{asset('/assets/js/select2.min.js')}}"></script>
-<script src="{{asset('/assets/js/jquery.magnific-popup.min.js')}}"></script>
-<script src="{{asset('/assets/js/slick.js')}}"></script>
-<script src="{{asset('/assets/js/slider-bg.js')}}"></script>
-<script src="{{asset('/assets/js/lightbox.js')}}"></script>
-<script src="{{asset('/assets/js/imagesloaded.js')}}"></script>
-{{--<script src="{{asset('/assets/js/daterangepicker.html')}}"></script>--}}
-<script src="{{asset('/assets/js/custom.js')}}"></script>
+<!-- Vendor scrits: js libraries and plugins-->
+<script src="{{asset('/vendor/bootstrap/dist/js/bootstrap.bundle.min.js')}}"></script>
+<script src="{{asset('/vendor/simplebar/dist/simplebar.min.js')}}"></script>
+<script src="{{asset('/vendor/smooth-scroll/dist/smooth-scroll.polyfills.min.js')}}"></script>
+<script src="{{asset('/vendor/nouislider/dist/nouislider.min.js')}}"></script>
+<script src="{{asset('/vendor/tiny-slider/dist/min/tiny-slider.js')}}"></script>
+<script src="{{asset('/vendor/jarallax/dist/jarallax.min.js')}}"></script>
+<!-- Main theme script-->
+<script src="{{asset('/js/theme.min.js')}}"></script>
