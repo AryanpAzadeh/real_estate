@@ -67,6 +67,6 @@
                 </div>
             </div>
         </div>
-        <div class="text-center fs-sm pt-4 mt-3 pb-2">&copy; تمام حقوق این سایت محفوظ است . ارائه شده در سایت <a href='https://www.rtl-theme.com/' class='d-inline-block nav-link p-0' rel='noopener'>راستچین</a></div>
+        <div class="text-center fs-sm pt-4 mt-3 pb-2">&copy; تمام حقوق این سایت محفوظ است . توسعه توسط آریا آزاده</div>
     </div>
 </footer>

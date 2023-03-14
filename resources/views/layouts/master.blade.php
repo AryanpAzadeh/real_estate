@@ -119,7 +119,7 @@
 <!-- Footer-->
 @include('layouts.footer')
 <!-- Back to top button-->
-<a class="btn-scroll-top" href="#top" data-scroll><span class="btn-scroll-top-tooltip text-muted fs-sm me-2">بالا</span><i class="btn-scroll-top-icon fi-chevron-up">   </i></a>
+<a class="btn-scroll-top" href="#top" data-scroll><span class="btn-scroll-top-tooltip text-muted fs-sm me-2"></span><i class="btn-scroll-top-icon fi-chevron-up">   </i></a>
 @include('layouts.script')
 </body>
 

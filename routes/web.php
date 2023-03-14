@@ -16,6 +16,7 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/' , [PagesController::class, 'index'])->name('pages.index');
+Route::get('agency-register' , [PagesController::class, 'agency_register'])->name('pages.agency_register');
 
 Route::get('/dashboard', function () {
     return view('dashboard');

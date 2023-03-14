@@ -10,4 +10,9 @@ class PagesController extends Controller
     {
         return view('pages.index');
     }
+
+    public function agency_register()
+    {
+        return view('pages.register_agency');
+    }
 }

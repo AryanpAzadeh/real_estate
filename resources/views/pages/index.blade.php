@@ -113,275 +113,131 @@
             </div>
         </div>
     </section>
-    <!-- About-->
-    <section class="container mb-5 pb-lg-4">
-        <div class="row">
-            <div class="col-lg-6 col-md-7">
-                <div class="row gy-4">
-                    <div class="col-md-5 col-sm-6">
-                        <h2 class="h3 mb-0 ">ما بهترین ها در بازار مسکن هستیم!</h2>
-                    </div>
-                    <div class="col-sm-6 offset-md-1">
-                        <p class="mb-0">صنعت چاپ و با استفاده از طراحان گرافیک است. چاپگرها و متون بلکه روزنامه و مجله در ستون و سطرآنچنان که لازم است و برای شرایط فعلی تکنولوژی مورد نیاز و کاربردهای متنوع با هدف بهبود ابزارهای کاربردی می باشد. </p>
-                    </div>
-                </div>
-                <div class="py-3">
-                    <hr class="my-4">
-                </div>
-                <div class="row row-cols-md-3 row-cols-1 gy-4 gx-lg-5 gx-3 text-center px-lg-4">
-                    <div class="col"><img class="d-block mx-auto mb-3" src="img/real-estate/brands/trustpilot.svg" alt="Trustpilot">
-                        <h5 class="mb-1">عالی</h5><span class="fs-sm">امتیاز 4.8 از 5</span>
-                    </div>
-                    <div class="col">
-                        <h5 class="h2 mb-2">200 هزار</h5><span class="fs-sm">لیست املاک جدید در سراسر جهان</span>
-                    </div>
-                    <div class="col">
-                        <h5 class="h2 mb-2">3.8</h5><span class="fs-sm">میانگین درآمد سالانه هر صاحبخانه</span>
-                    </div>
-                </div>
-            </div>
-            <div class="col-md-5 offset-lg-1"><img class="d-block mx-auto rotate-img" src="img/real-estate/illustrations/find-alt.svg" alt="Illustration"></div>
-        </div>
-    </section>
-    <!-- Newly listed properties-->
-    <section class="container mt-n3 mt-md-0 mb-5 pb-3 pb-lg-4">
-        <div class="d-flex align-items-end justify-content-between mb-4 pb-md-2">
-            <h2 class="h3 mb-0 ">املاک ویژه ما</h2><a class="btn btn-link fw-normal ms-2 p-0" href="real-estate-catalog-sale.html">مشاهده همه<i class="fi-arrow-long-left ms-2"></i></a>
-        </div>
-        <!-- Carousel-->
-        <div class="tns-carousel-wrapper">
-            <div class="tns-carousel-inner" data-carousel-options="{&quot;mode&quot;: &quot;gallery&quot;, &quot;speed&quot;: 800, &quot;nav&quot;: false, &quot;controlsContainer&quot;: &quot;#carousel-controls-lp&quot;}">
-                <!-- Item-->
-                <div>
-                    <div class="row">
-                        <div class="col-lg-8 col-md-7 mb-md-0 mb-3">
-                            <div class="position-relative pr-lg-5">
-                                <div class="position-absolute top-0 start-0 zindex-1 m-3 p-1"><span class="badge bg-info fs-sm me-2">جدید</span><span class="badge bg-success fs-sm me-2">تاییده شده</span></div><img class="rounded-3 zindex-5" src="img/real-estate/recent/04.jpg" alt="Article image">
-                            </div>
-                        </div>
-                        <div class="col-lg-4 col-md-5"><span class="d-inline-block fs-sm text-uppercase text-primary mb-2 from-top">فروشی</span>
-                            <div class="from-end delay-2">
-                                <h3 class="h4 mb-2">آپارتمان 3خوابه</h3>
-                                <p class="mb-md-4 mb-3 fs-sm">تهران، خیابان سعادت آباد، خیابان سرو غربی مجتمع رویا</p>
-                                <ul class="d-flex mb-md-4 mb-3 list-unstyled">
-                                    <li class="me-3 ps-3 border-end"><b class="ms-1">4</b><i class="fi-bed mt-n1 lead align-middle text-muted"></i></li>
-                                    <li class="me-3 ps-3 border-end"><b class="ms-1">2</b><i class="fi-bath mt-n1 lead align-middle text-muted"></i></li>
-                                    <li class="me-3 ps-3 border-end"><b class="ms-1">2</b><i class="fi-car mt-n1 lead align-middle text-muted"></i></li>
-                                    <li><b>126 </b>مترمربع</li>
-                                </ul>
-                                <p class="mb-4 pb-md-2">ارائه راهکارها و شرایط سخت تایپ به پایان رسد وزمان مورد نیاز شامل حروفچینی دستاوردهای اصلی و جوابگوی سوالات پیوسته اهل دنیای موجود طراحی اساسا مورد استفاده قرار گیرد.</p>
-                            </div>
-                            <div class="btn-group btn-group-lg scale-up delay-3" role="group" aria-label="خرید یا نشان کردن">
-                                <button class="btn btn-primary px-3 border-start border-light" data-bs-toggle="tooltip" data-bs-placement="top" title="نشان کردن"><i class="fi-heart fs-5"></i></button>
-                                <a class="btn btn-primary" href="real-estate-single-v1-v2.html">قیمت 120 میلیون تومان</a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <!-- Item-->
-                <div>
-                    <div class="row">
-                        <div class="col-lg-8 col-md-7 mb-md-0 mb-3">
-                            <div class="position-relative pr-lg-5">
-                                <div class="position-absolute top-0 start-0 zindex-1 m-3 p-1"><span class="badge bg-info fs-sm me-2">جدید</span><span class="badge bg-success fs-sm me-2">تاییده شده</span></div><img class="rounded-3 zindex-5" src="img/real-estate/recent/05.jpg" alt="Article image">
-                            </div>
-                        </div>
-                        <div class="col-lg-4 col-md-5"><span class="d-inline-block fs-sm text-uppercase text-primary mb-2 from-top">اجاره ای</span>
-                            <div class="from-end delay-2">
-                                <h3 class="h4 mb-2">ویلا لوکس در لوس آنجلس</h3>
-                                <p class="mb-md-4 mb-3 fs-sm">خیابان سعادت آباد، خیابان سرو غربی</p>
-                                <ul class="d-flex mb-md-4 mb-3 list-unstyled">
-                                    <li class="me-3 ps-3 border-end"><b class="ms-1">5</b><i class="fi-bed mt-n1 lead align-middle text-muted"></i></li>
-                                    <li class="me-3 ps-3 border-end"><b class="ms-1">3</b><i class="fi-bath mt-n1 lead align-middle text-muted"></i></li>
-                                    <li class="me-3 ps-3 border-end"><b class="ms-1">1</b><i class="fi-car mt-n1 lead align-middle text-muted"></i></li>
-                                    <li><b>140 </b>مترمربع</li>
-                                </ul>
-                                <p class="mb-4 pb-md-2">ارائه راهکارها و شرایط سخت تایپ به پایان رسد وزمان مورد نیاز شامل حروفچینی دستاوردهای اصلی و جوابگوی سوالات پیوسته اهل دنیای موجود طراحی اساسا مورد استفاده قرار گیرد.</p>
-                            </div>
-                            <div class="btn-group btn-group-lg scale-up delay-3" role="group" aria-label="Buy now or add to wishlist"><a class="btn btn-primary" href="#">اجاره برای 50 میلیون تومان</a>
-                                <button class="btn btn-primary px-3 border-start border-light" data-bs-toggle="tooltip" data-bs-placement="top" title="Add to Wishlist"><i class="fi-heart fs-5"></i></button>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <!-- Carousel custom controls-->
-        <div class="tns-carousel-controls pt-2 mt-4" id="carousel-controls-lp">
-            <button class="me-3" type="button"><i class="fi-chevron-left fs-xs"></i></button>
-            <button type="button"><i class="fi-chevron-right fs-xs"></i></button>
-        </div>
-    </section>
-    <!-- Discover locations-->
-    <section class="container mb-5 pb-lg-5 pb-4">
-        <div class="d-flex align-items-start justify-content-between mb-3 mb-md-4 pb-md-2">
-            <div class="d-flex flex-md-row flex-column align-items-center">
-                <h2 class="h3 mb-4 mb-md-0 ">شهرهای پیشنهادی ما</h2>
-                <ul class="nav nav-tabs mb-0 me-md-4 me-n3 pl-lg-2" role="tablist">
-                    <li class="nav-item"><a class="nav-link active" href="#">اجاره</a></li>
-                    <li class="nav-item"><a class="nav-link" href="#">فروش</a></li>
-                </ul>
-            </div><a class="btn btn-link fw-normal ms-2 p-0" href="real-estate-catalog-rent.html">مشاهده همه<i class="fi-arrow-long-left ms-2"></i></a>
-        </div>
-        <!-- Carousel-->
-        <div class="tns-carousel-wrapper tns-nav-outside tns-nav-outside-flush mx-n2">
-            <div class="tns-carousel-inner row gx-4 mx-0 py-3" data-carousel-options="{&quot;items&quot;: 3, &quot;controls&quot;: false, &quot;responsive&quot;: {&quot;0&quot;:{&quot;items&quot;:1},&quot;500&quot;:{&quot;items&quot;:2},&quot;768&quot;:{&quot;items&quot;:3}}}">
-                <div class="col">
-                    <div class="card card-hover border-0 shadow-sm h-100 p-2">
-                        <div class="card-body p-4"><img class="d-block rounded-3 mb-3" src="img/real-estate/locations/usa.svg" width="80">
-                            <h4 class="h5 mb-2 ">موقعیت های عالی</h4><span class="fs-sm text-muted">پیوسته اهل دنیای موجود طراحی اساسا مورد استفاده قرار گیرد.</span>
-                            <hr class="my-4">
-                            <ul class="nav flex-column mb-0">
-                                <li class="nav-item mb-2 pb-1"><a class="nav-link p-0 fw-normal" href="#">نیویورک</a></li>
-                                <li class="nav-item mb-2 pb-1"><a class="nav-link p-0 fw-normal" href="#">لوس آنجلس</a></li>
-                                <li class="nav-item mb-2 pb-1"><a class="nav-link p-0 fw-normal" href="#">کانادا</a></li>
-                                <li class="nav-item mb-2 pb-1"><a class="nav-link p-0 fw-normal" href="#">آرژانتین</a></li>
-                                <li class="nav-item mb-2 pb-1"><a class="nav-link p-0 fw-normal" href="#">فیلیپین</a></li>
-                                <li class="nav-item"><a class="nav-link p-0 fw-normal" href="#">شیکاگو</a></li>
-                            </ul>
-                        </div>
-                    </div>
-                </div>
-                <div class="col">
-                    <div class="card card-hover border-0 shadow-sm h-100 p-2">
-                        <div class="card-body p-4"><img class="d-block rounded-3 mb-3" src="img/real-estate/locations/city.svg" width="80">
-                            <h4 class="h5 mb-2 ">موقعیت های شهری</h4><span class="fs-sm text-muted">طراحان خلاقی و فرهنگ پیشرو در زبان فارسی ایجاد کرد.</span>
-                            <hr class="my-4">
-                            <ul class="nav flex-column mb-0">
-                                <li class="nav-item mb-2 pb-1"><a class="nav-link p-0 fw-normal" href="#">سن فراسیسکو</a></li>
-                                <li class="nav-item mb-2 pb-1"><a class="nav-link p-0 fw-normal" href="#">آمستردام</a></li>
-                                <li class="nav-item mb-2 pb-1"><a class="nav-link p-0 fw-normal" href="#">دبی</a></li>
-                                <li class="nav-item mb-2 pb-1"><a class="nav-link p-0 fw-normal" href="#">مکزیک</a></li>
-                                <li class="nav-item mb-2 pb-1"><a class="nav-link p-0 fw-normal" href="#">چین</a></li>
-                                <li class="nav-item"><a class="nav-link p-0 fw-normal" href="#">پاریس</a></li>
-                            </ul>
-                        </div>
-                    </div>
-                </div>
-                <div class="col">
-                    <div class="card card-hover border-0 shadow-sm h-100 p-2">
-                        <div class="card-body p-4"><img class="d-block rounded-3 mb-3" src="img/real-estate/locations/field.svg" width="80">
-                            <h4 class="h5 mb-2 ">موقعیت های ویژه</h4><span class="fs-sm text-muted">صنعت چاپ و با استفاده از طراحان گرافیک است.</span>
-                            <hr class="my-4">
-                            <ul class="nav flex-column mb-0">
-                                <li class="nav-item mb-2 pb-1"><a class="nav-link p-0 fw-normal" href="#">استرالیا</a></li>
-                                <li class="nav-item mb-2 pb-1"><a class="nav-link p-0 fw-normal" href="#">شیکاگو</a></li>
-                                <li class="nav-item mb-2 pb-1"><a class="nav-link p-0 fw-normal" href="#">آلمان</a></li>
-                                <li class="nav-item mb-2 pb-1"><a class="nav-link p-0 fw-normal" href="#">کالیفرنیا</a></li>
-                                <li class="nav-item mb-2 pb-1"><a class="nav-link p-0 fw-normal" href="#">آمریکا</a></li>
-                                <li class="nav-item"><a class="nav-link p-0 fw-normal" href="#">مجارستان</a></li>
-                            </ul>
-                        </div>
-                    </div>
+    <!-- Category-->
+    <section class="container mb-5">
+        <div class="row row-cols-lg-6 row-cols-sm-3 row-cols-2 g-3 g-xl-4">
+            <div class="col"><a class="icon-box card card-body h-100 border-0 shadow-sm card-hover h-100 text-center" href="real-estate-catalog-rent.html">
+                    <div class="icon-box-media bg-faded-primary text-primary rounded-circle mb-3 mx-auto"><i class="fi-real-estate-house"></i></div>
+                    <h3 class="icon-box-title fs-base mb-0">خانه</h3></a></div>
+            <div class="col"><a class="icon-box card card-body h-100 border-0 shadow-sm card-hover h-100 text-center" href="real-estate-catalog-sale.html">
+                    <div class="icon-box-media bg-faded-primary text-primary rounded-circle mb-3 mx-auto"><i class="fi-apartment"></i></div>
+                    <h3 class="icon-box-title fs-base mb-0">آپارتمان</h3></a></div>
+            <div class="col"><a class="icon-box card card-body h-100 border-0 shadow-sm card-hover h-100 text-center" href="real-estate-catalog-rent.html">
+                    <div class="icon-box-media bg-faded-primary text-primary rounded-circle mb-3 mx-auto"><i class="fi-shop"></i></div>
+                    <h3 class="icon-box-title fs-base mb-0">تجاری و اداری</h3></a></div>
+            <div class="col"><a class="icon-box card card-body h-100 border-0 shadow-sm card-hover h-100 text-center" href="real-estate-catalog-sale.html">
+                    <div class="icon-box-media bg-faded-primary text-primary rounded-circle mb-3 mx-auto"><i class="fi-rent"></i></div>
+                    <h3 class="icon-box-title fs-base mb-0">سوئیت</h3></a></div>
+            <div class="col"><a class="icon-box card card-body h-100 border-0 shadow-sm card-hover h-100 text-center" href="real-estate-catalog-rent.html">
+                    <div class="icon-box-media bg-faded-primary text-primary rounded-circle mb-3 mx-auto"><i class="fi-house-chosen"></i></div>
+                    <h3 class="icon-box-title fs-base mb-0">زمین</h3></a></div>
+            <div class="col">
+                <div class="dropdown h-100"><a class="icon-box card card-body h-100 border-0 shadow-sm card-hover text-center" href="#" data-bs-toggle="dropdown">
+                        <div class="icon-box-media bg-faded-primary text-primary rounded-circle mb-3 mx-auto"><i class="fi-dots-horisontal"></i></div>
+                        <h3 class="icon-box-title fs-base mb-0">گزینه های بیشتر</h3></a>
+                    <div class="dropdown-menu dropdown-menu-end my-1"><a class="dropdown-item fw-bold" href="real-estate-catalog-sale.html"><i class="fi-single-bed fs-base opacity-60 me-2"></i>سوئیت</a><a class="dropdown-item fw-bold" href="real-estate-catalog-rent.html"><i class="fi-computer fs-base opacity-60 me-2"></i>دفتر کار</a><a class="dropdown-item fw-bold" href="real-estate-catalog-sale.html"><i class="fi-real-estate-buy fs-base opacity-60 me-2"></i>زمین</a><a class="dropdown-item fw-bold" href="real-estate-catalog-rent.html"><i class="fi-parking fs-base opacity-60 me-2"></i>خانه حیاط دار</a></div>
                 </div>
             </div>
         </div>
     </section>
     <!-- Top properties-->
-    <section class="container-fluid px-xxl-4 mb-5 pb-lg-4">
-        <h2 class="h3 mb-4 pb-2 text-center ">جدیدترین املاک</h2>
-        <!-- Carousel-->
-        <div class="tns-carousel-wrapper tns-nav-outside tns-nav-outside-flush mx-n2">
-            <div class="tns-carousel-inner row gx-4 mx-0" data-carousel-options="{&quot;nav&quot;: false, &quot;autoHeight&quot;: true, &quot;controlsContainer&quot;: &quot;#carousel-controls-tp&quot;, &quot;responsive&quot;: {&quot;0&quot;:{&quot;items&quot;:1},&quot;1320&quot;:{&quot;items&quot;:2}}}">
-                <!-- Carousel item-->
+    <section class="container mb-5 pb-md-4">
+        <div class="d-flex align-items-center justify-content-between mb-3">
+            <h2 class="h3 mb-0 ">خانه های ویژه ما</h2><a class="btn btn-link fw-normal p-0" href="real-estate-catalog-rent.html">مشاهده همه <i class="fi-arrow-long-left ms-2"></i></a>
+        </div>
+        <div class="tns-carousel-wrapper tns-controls-outside-xxl tns-nav-outside tns-nav-outside-flush mx-n2" dir="ltr">
+            <div class="tns-carousel-inner row gx-4 mx-0 pt-3 pb-4" data-carousel-options="{&quot;items&quot;: 4, &quot;responsive&quot;: {&quot;0&quot;:{&quot;items&quot;:1},&quot;500&quot;:{&quot;items&quot;:2},&quot;768&quot;:{&quot;items&quot;:3},&quot;992&quot;:{&quot;items&quot;:4}}}">
+                <!-- Item-->
                 <div class="col">
-                    <div class="row gy-md-0 gy-sm-4 gy-3 gx-sm-4 gx-0">
-                        <div class="col-md-7"><a class="text-decoration-none text-light card bg-size-cover bg-position-center border-0 overflow-hidden h-100" href="real-estate-single-v1-v1.html" style="background-image: url(img/real-estate/top-properties/01.jpg); min-height: 18.75rem;"><span class="img-gradient-overlay"></span>
-                                <div class="card-body content-overlay pb-0"></div>
-                                <div class="card-footer content-overlay border-0 pt-0 pb-4">
-                                    <div class="d-sm-flex justify-content-between align-items-end pt-5 mt-2 mt-sm-5">
-                                        <div class="pe-2">
-                                            <div class="fs-sm text-uppercase pt-2 mb-1">فروش</div>
-                                            <h3 class="h5 text-light mb-1">ویلا لوکس با گاراژ</h3>
-                                            <div class="fs-sm opacity-70"><i class="fi-map-pin ms-1"></i>تهران، زعفرانیه، خیابان صدف، مجتمع نیلوفر شرقی</div>
-                                        </div>
-                                    </div>
-                                </div></a></div>
-                        <div class="col-md-5"><a class="card border-0 overflow-hidden mb-sm-4 mb-3 text-decoration-none text-light" href="real-estate-single-v1-v2.html">
-                                <div class="card-body p-0 position-relative"><img src="img/real-estate/top-properties/02.jpg" alt="Article image"><span class="img-gradient-overlay zindex-1"></span>
-                                    <div class="position-absolute start-0 bottom-0 m-n1 p-4 zindex-5">
-                                        <div class="fs-sm text-uppercase pt-2 mb-1">اجاره</div>
-                                        <h3 class="h5 text-light mb-1">آپارتمان مدرن استخردار</h3>
-                                        <div class="fs-sm opacity-70"><i class="fi-map-pin ms-1"></i>مشهد، خیابان سجاد، کوچه اقاقیا طبقه 8</div>
-                                    </div>
-                                </div></a><a class="card border-0 overflow-hidden text-decoration-none text-light" href="real-estate-single-v1-v2.html">
-                                <div class="card-body p-0 position-relative"><img src="img/real-estate/top-properties/03.jpg" alt="Article image"><span class="img-gradient-overlay zindex-1"></span>
-                                    <div class="position-absolute start-0 bottom-0 m-n1 p-4 zindex-5">
-                                        <div class="fs-sm text-uppercase pt-2 mb-1">فروش</div>
-                                        <h3 class="h5 text-light mb-1">خانه دوبلکس</h3>
-                                        <div class="fs-sm opacity-70"><i class="fi-map-pin ms-1"></i>تهران، الهیه، نبش خیابان کاج غربی</div>
-                                    </div>
-                                </div></a></div>
+                    <div class="card shadow-sm card-hover border-0 h-100">
+                        <div class="card-img-top card-img-hover"><a class="img-overlay" href="real-estate-single-v1.html"></a>
+                            <div class="position-absolute start-0 top-0 pt-3 pe-3"><span class="d-table badge bg-success mb-1">تایید</span><span class="d-table badge bg-info">جدید</span></div>
+                            <div class="content-overlay end-0 top-0 pt-3 ps-3">
+                                <button class="btn btn-icon btn-light btn-xs text-primary rounded-circle" type="button" data-bs-toggle="tooltip" data-bs-placement="right" title="Add to Wishlist"><i class="fi-heart"></i></button>
+                            </div><img src="img/real-estate/catalog/01.jpg" alt="Image">
+                        </div>
+                        <div class="card-body position-relative pb-3">
+                            <h4 class="mb-1 fs-sm fw-normal text-uppercase text-primary">اجاره</h4>
+                            <h3 class="h6 mb-2 fs-base"><a class="nav-link stretched-link" href="real-estate-single-v1.html">آپارتمان 3خوابه | 85 مترمربع</a></h3>
+                            <p class="mb-2 fs-sm text-muted">آپارتمان مدرن استخردار</p>
+                            <div><i class="fi-cash mt-n1 ms-2 lead align-middle opacity-70"></i> 250000 ت</div>
+                        </div>
+                        <div class="card-footer d-flex align-items-center justify-content-center mx-3 pt-3 text-nowrap"><span class="d-inline-block mx-1 px-2 fs-sm">3<i class="fi-bed me-1 mt-n1 fs-lg text-muted"></i></span><span class="d-inline-block mx-1 px-2 fs-sm">2<i class="fi-bath me-1 mt-n1 fs-lg text-muted"></i></span><span class="d-inline-block mx-1 px-2 fs-sm">2<i class="fi-car me-1 mt-n1 fs-lg text-muted"></i></span></div>
                     </div>
                 </div>
-                <!-- Carousel item-->
+                <!-- Item-->
                 <div class="col">
-                    <div class="row gy-md-0 gy-sm-4 gy-3 gx-sm-4 gx-0">
-                        <div class="col-md-7"><a class="text-decoration-none text-light card bg-size-cover bg-position-center border-0 overflow-hidden h-100" href="real-estate-single-v1-v1.html" style="background-image: url(img/real-estate/top-properties/04.jpg); min-height: 18.75rem;"><span class="img-gradient-overlay"></span>
-                                <div class="card-body content-overlay pb-0"></div>
-                                <div class="card-footer content-overlay border-0 pt-0 pb-4">
-                                    <div class="d-sm-flex justify-content-between align-items-end pt-5 mt-2 mt-sm-5">
-                                        <div class="pe-2">
-                                            <div class="fs-sm text-uppercase pt-2 mb-1">اجاره</div>
-                                            <h3 class="h5 text-light mb-1">آپارتمان 2 خوابه</h3>
-                                            <div class="fs-sm opacity-70"><i class="fi-map-pin ms-1"></i>بزرگراه نواب، خیابان صفدری، خیابان محبوب مجاز شرقی</div>
-                                        </div>
-                                    </div>
-                                </div></a></div>
-                        <div class="col-md-5"><a class="card border-0 overflow-hidden mb-sm-4 mb-3 text-decoration-none text-light" href="real-estate-single-v1-v2.html">
-                                <div class="card-body p-0 position-relative"><img src="img/real-estate/top-properties/05.jpg" alt="Article image"><span class="img-gradient-overlay zindex-1"></span>
-                                    <div class="position-absolute start-0 bottom-0 m-n1 p-4 zindex-5">
-                                        <div class="fs-sm text-uppercase pt-2 mb-1">فروش</div>
-                                        <h3 class="h5 text-light mb-1">خانه حیاط دار</h3>
-                                        <div class="fs-sm opacity-70"><i class="fi-map-pin ms-1"></i>سیدخندان، 100متر بالاتر از مترو شریعتی</div>
-                                    </div>
-                                </div></a><a class="card border-0 overflow-hidden text-decoration-none text-light" href="real-estate-single-v1-v2.html">
-                                <div class="card-body p-0 position-relative"><img src="img/real-estate/top-properties/06.jpg" alt="Article image"><span class="img-gradient-overlay zindex-1"></span>
-                                    <div class="position-absolute start-0 bottom-0 m-n1 p-4 zindex-5">
-                                        <div class="fs-sm text-uppercase pt-2 mb-1">فروش</div>
-                                        <h3 class="h5 text-light mb-1">ویلا 2 طبقه | 150 متر مربع</h3>
-                                        <div class="fs-sm opacity-70"><i class="fi-map-pin ms-1"></i>شمال، خیابان شادمان بن بست شکوفه</div>
-                                    </div>
-                                </div></a></div>
+                    <div class="card shadow-sm card-hover border-0 h-100">
+                        <div class="card-img-top card-img-hover"><a class="img-overlay" href="real-estate-single-v1.html"></a>
+                            <div class="position-absolute start-0 top-0 pt-3 pe-3"><span class="d-table badge bg-success mb-1">تایید</span><span class="d-table badge bg-danger">ویژه</span></div>
+                            <div class="content-overlay end-0 top-0 pt-3 ps-3">
+                                <button class="btn btn-icon btn-light btn-xs text-primary rounded-circle" type="button" data-bs-toggle="tooltip" data-bs-placement="right" title="Add to Wishlist"><i class="fi-heart"></i></button>
+                            </div><img src="img/real-estate/catalog/02.jpg" alt="Image">
+                        </div>
+                        <div class="card-body position-relative pb-3">
+                            <h4 class="mb-1 fs-sm fw-normal text-uppercase text-primary">فروش</h4>
+                            <h3 class="h6 mb-2 fs-base"><a class="nav-link stretched-link" href="real-estate-single-v1.html">ویلا 2 طبقه | 150 متر مربع</a></h3>
+                            <p class="mb-2 fs-sm text-muted">ویلا لوکس در لوس آنجلس</p>
+                            <div><i class="fi-cash mt-n1 ms-2 lead align-middle opacity-70"></i> 840000 ت</div>
+                        </div>
+                        <div class="card-footer d-flex align-items-center justify-content-center mx-3 pt-3 text-nowrap"><span class="d-inline-block mx-1 px-2 fs-sm">4<i class="fi-bed me-1 mt-n1 fs-lg text-muted"></i></span><span class="d-inline-block mx-1 px-2 fs-sm">2<i class="fi-bath me-1 mt-n1 fs-lg text-muted"></i></span><span class="d-inline-block mx-1 px-2 fs-sm">2<i class="fi-car me-1 mt-n1 fs-lg text-muted"></i></span></div>
                     </div>
                 </div>
-                <!-- Carousel item-->
+                <!-- Item-->
                 <div class="col">
-                    <div class="row gy-md-0 gy-sm-4 gy-3 gx-sm-4 gx-0">
-                        <div class="col-md-7"><a class="text-decoration-none text-light card bg-size-cover bg-position-center border-0 overflow-hidden h-100" href="real-estate-single-v1-v1.html" style="background-image: url(img/real-estate/top-properties/07.jpg); min-height: 18.75rem;"><span class="img-gradient-overlay"></span>
-                                <div class="card-body content-overlay pb-0"></div>
-                                <div class="card-footer content-overlay border-0 pt-0 pb-4">
-                                    <div class="d-sm-flex justify-content-between align-items-end pt-5 mt-2 mt-sm-5">
-                                        <div class="pe-2">
-                                            <div class="fs-sm text-uppercase pt-2 mb-1">فروش</div>
-                                            <h3 class="h5 text-light mb-1">ویلا 2 طبقه | 150 متر مربع</h3>
-                                            <div class="fs-sm opacity-70"><i class="fi-map-pin ms-1"></i>شمال، خیابان شادمان بن بست شکوفه</div>
-                                        </div>
-                                    </div>
-                                </div></a></div>
-                        <div class="col-md-5"><a class="card border-0 overflow-hidden mb-sm-4 mb-3 text-decoration-none text-light" href="real-estate-single-v1-v2.html">
-                                <div class="card-body p-0 position-relative"><img src="img/real-estate/top-properties/08.jpg" alt="Article image"><span class="img-gradient-overlay zindex-1"></span>
-                                    <div class="position-absolute start-0 bottom-0 m-n1 p-4 zindex-5">
-                                        <div class="fs-sm text-uppercase pt-2 mb-1">فروش</div>
-                                        <h3 class="h5 text-light mb-1">خانه حیاط دار</h3>
-                                        <div class="fs-sm opacity-70"><i class="fi-map-pin ms-1"></i>سیدخندان، 100متر بالاتر از مترو شریعتی</div>
-                                    </div>
-                                </div></a><a class="card border-0 overflow-hidden text-decoration-none text-light" href="real-estate-single-v1-v2.html">
-                                <div class="card-body p-0 position-relative"><img src="img/real-estate/top-properties/09.jpg" alt="Article image"><span class="img-gradient-overlay zindex-1"></span>
-                                    <div class="position-absolute start-0 bottom-0 m-n1 p-4 zindex-5">
-                                        <div class="fs-sm text-uppercase pt-2 mb-1">اجاره</div>
-                                        <h3 class="h5 text-light mb-1">آپارتمان 2 خوابه</h3>
-                                        <div class="fs-sm opacity-70"><i class="fi-map-pin ms-1"></i>بزرگراه نواب، خیابان صفدری، خیابان محبوب مجاز شرقی</div>
-                                    </div>
-                                </div></a></div>
+                    <div class="card shadow-sm card-hover border-0 h-100">
+                        <div class="card-img-top card-img-hover"><a class="img-overlay" href="real-estate-single-v1.html"></a>
+                            <div class="position-absolute start-0 top-0 pt-3 pe-3"><span class="d-table badge bg-success mb-1">تایید</span></div>
+                            <div class="content-overlay end-0 top-0 pt-3 ps-3">
+                                <button class="btn btn-icon btn-light btn-xs text-primary rounded-circle" type="button" data-bs-toggle="tooltip" data-bs-placement="right" title="Add to Wishlist"><i class="fi-heart"></i></button>
+                            </div><img src="img/real-estate/catalog/03.jpg" alt="Image">
+                        </div>
+                        <div class="card-body position-relative pb-3">
+                            <h4 class="mb-1 fs-sm fw-normal text-uppercase text-primary">اجاره</h4>
+                            <h3 class="h6 mb-2 fs-base"><a class="nav-link stretched-link" href="real-estate-single-v1.html">آپارتمان 2 خوابه | 110 متر</a></h3>
+                            <p class="mb-2 fs-sm text-muted">خصوصیات تپه دریایی آبی</p>
+                            <div><i class="fi-cash mt-n1 ms-2 lead align-middle opacity-70"></i> 750000 ت</div>
+                        </div>
+                        <div class="card-footer d-flex align-items-center justify-content-center mx-3 pt-3 text-nowrap"><span class="d-inline-block mx-1 px-2 fs-sm">3<i class="fi-bed me-1 mt-n1 fs-lg text-muted"></i></span><span class="d-inline-block mx-1 px-2 fs-sm">2<i class="fi-bath me-1 mt-n1 fs-lg text-muted"></i></span><span class="d-inline-block mx-1 px-2 fs-sm">2<i class="fi-car me-1 mt-n1 fs-lg text-muted"></i></span></div>
+                    </div>
+                </div>
+                <!-- Item-->
+                <div class="col">
+                    <div class="card shadow-sm card-hover border-0 h-100">
+                        <div class="card-img-top card-img-hover"><a class="img-overlay" href="real-estate-single-v1.html"></a>
+                            <div class="position-absolute start-0 top-0 pt-3 pe-3"><span class="d-table badge bg-success mb-1">تایید</span><span class="d-table badge bg-info">جدید</span></div>
+                            <div class="content-overlay end-0 top-0 pt-3 ps-3">
+                                <button class="btn btn-icon btn-light btn-xs text-primary rounded-circle" type="button" data-bs-toggle="tooltip" data-bs-placement="right" title="Add to Wishlist"><i class="fi-heart"></i></button>
+                            </div><img src="img/real-estate/catalog/04.jpg" alt="Image">
+                        </div>
+                        <div class="card-body position-relative pb-3">
+                            <h4 class="mb-1 fs-sm fw-normal text-uppercase text-primary">فروش</h4>
+                            <h3 class="h6 mb-2 fs-base"><a class="nav-link stretched-link" href="real-estate-single-v1.html">ویلا 2 طبقه | 150 متر مربع</a></h3>
+                            <p class="mb-2 fs-sm text-muted">خصوصیات تپه دریایی آبی</p>
+                            <div><i class="fi-cash mt-n1 ms-2 lead align-middle opacity-70"></i> 1040000 ت</div>
+                        </div>
+                        <div class="card-footer d-flex align-items-center justify-content-center mx-3 pt-3 text-nowrap"><span class="d-inline-block mx-1 px-2 fs-sm">4<i class="fi-bed me-1 mt-n1 fs-lg text-muted"></i></span><span class="d-inline-block mx-1 px-2 fs-sm">2<i class="fi-bath me-1 mt-n1 fs-lg text-muted"></i></span><span class="d-inline-block mx-1 px-2 fs-sm">2<i class="fi-car me-1 mt-n1 fs-lg text-muted"></i></span></div>
+                    </div>
+                </div>
+                <!-- Item-->
+                <div class="col">
+                    <div class="card shadow-sm card-hover border-0 h-100">
+                        <div class="card-img-top card-img-hover"><a class="img-overlay" href="real-estate-single-v1.html"></a>
+                            <div class="position-absolute start-0 top-0 pt-3 pe-3"><span class="d-table badge bg-success mb-1">تایید</span></div>
+                            <div class="content-overlay end-0 top-0 pt-3 ps-3">
+                                <button class="btn btn-icon btn-light btn-xs text-primary rounded-circle" type="button" data-bs-toggle="tooltip" data-bs-placement="right" title="Add to Wishlist"><i class="fi-heart"></i></button>
+                            </div><img src="img/real-estate/catalog/05.jpg" alt="Image">
+                        </div>
+                        <div class="card-body position-relative pb-3">
+                            <h4 class="mb-1 fs-sm fw-normal text-uppercase text-primary">فروش</h4>
+                            <h3 class="h6 mb-2 fs-base"><a class="nav-link stretched-link" href="real-estate-single-v1.html">ویلا 2 طبقه | 150 متر مربع</a></h3>
+                            <p class="mb-2 fs-sm text-muted">ویلا لوکس در لوس آنجلس</p>
+                            <div><i class="fi-cash mt-n1 ms-2 lead align-middle opacity-70"></i> 180000 ت</div>
+                        </div>
+                        <div class="card-footer d-flex align-items-center justify-content-center mx-3 pt-3 text-nowrap"><span class="d-inline-block mx-1 px-2 fs-sm">4<i class="fi-bed me-1 mt-n1 fs-lg text-muted"></i></span><span class="d-inline-block mx-1 px-2 fs-sm">2<i class="fi-bath me-1 mt-n1 fs-lg text-muted"></i></span><span class="d-inline-block mx-1 px-2 fs-sm">2<i class="fi-car me-1 mt-n1 fs-lg text-muted"></i></span></div>
                     </div>
                 </div>
             </div>
-        </div>
-        <!-- Carousel custom controls-->
-        <div class="tns-carousel-controls justify-content-center pt-md-2 mt-4" id="carousel-controls-tp">
-            <button class="me-3" type="button"><i class="fi-chevron-left fs-xs"></i></button>
-            <button type="button"><i class="fi-chevron-right fs-xs"></i></button>
         </div>
     </section>
     <!-- Find your agent-->
@@ -494,6 +350,21 @@
                     </div>
                     <div class="card-footer py-1 border-0"><a class="stretched-link btn btn-link mb-3 px-0 text-success" href="real-estate-about.html">شروع کنید</a></div>
                 </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="container mb-5 pb-sm-3 pb-lg-4">
+        <div class="bg-secondary rounded-3">
+            <div class="col-md-11 col-12 offset-md-1 p-md-0 p-2 d-flex align-items-center justify-content-between">
+                <div class="me-md-5 py-md-5 px-md-0 p-4" style="max-width: 526px;">
+                    <h2 class="mb-md-4 ">
+                        با اطمینان ملک بخرید <br>
+                        فروش ملک با بهترین قیمت
+                    </h2>
+                    <p class="mb-4 pb-md-3 fs-lg">لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ و با استفاده از طراحان گرافیک است. چاپگرها و متون بلکه روزنامه و مجله در ستون و سطرآنچنان که لازم است و برای شرایط فعلی تکنولوژی مورد نیاز و کاربردهای متنوع با هدف بهبود ابزارهای کاربردی می باشد. </p><a class="btn btn-lg btn-primary" href="real-estate-catalog-sale.html"><i class="fi-search me-2"></i>ملک خود را پیدا کن!</a>
+                </div>
+                <div class="col-4 d-md-block d-none align-self-end px-0"><img class="mt-n5" src="img/real-estate/about/01.png" width="406" alt="Cover image"></div>
             </div>
         </div>
     </section>
