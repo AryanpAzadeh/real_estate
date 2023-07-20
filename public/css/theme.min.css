@@ -16182,6 +16182,7 @@ a.step.active {
   width: 100% !important;
   margin: 0 !important;
   color: #666276;
+    padding: 10px;
 }
 .leaflet-container {
   font-family: "vazir-bold", sans-serif;
@@ -16327,7 +16328,7 @@ _:-ms-lang(x),
 @media (max-width: 991px) {
 .navbar-collapse .fi-layers{
 	padding-left: 0.5rem
-}  
+}
 .navbar-collapse .dropdown-toggle:not(.dropdown-toggle-split):after {
   margin-left: 0;
   margin-right : auto !important
@@ -16363,7 +16364,7 @@ _:-ms-lang(x),
 }
 .text-justify{
 	text-align: justify
-} 
+}
 .cunters .fs-4{
 	font-family: vazir;
 	font-weight: 500
@@ -16379,7 +16380,7 @@ _:-ms-lang(x),
 .border-left{
 	border-left: 1px solid #d5d2dc;
     padding: 14px 0 20px 20px;
-    cursor: pointer; 
+    cursor: pointer;
 }
 .upload:before{
 	content: 'آپلود فایل';

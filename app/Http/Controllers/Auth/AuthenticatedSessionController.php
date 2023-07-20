@@ -29,8 +29,34 @@ class AuthenticatedSessionController extends Controller
 
         $request->session()->regenerate();
 
-        return redirect()->intended(RouteServiceProvider::HOME);
+//        return redirect()->intended(RouteServiceProvider::HOME);
+//        protected function redirectTo()
+//    {
+        if (\Auth::user()->user_type == 'agency' && auth()->user()->is_active == 1)
+        {
+            return redirect()->route('agency.home');
+        }
+
+        if (\Auth::user()->user_type == 'consultant' && auth()->user()->is_active == 1)
+        {
+            return redirect()->route('consultant.home');
+        }
+        if (\Auth::user()->user_type == 'user' && auth()->user()->is_active == 1)
+        {
+            return redirect()->route('user.home');
+        }
+        if (\Auth::user()->user_type == 'admin')
+        {
+            return redirect()->route('admin.home');
+        }
+
+        else
+        {
+            return redirect(route('pages.index'));
+        }
+
     }
+//    }
 
     /**
      * Destroy an authenticated session.

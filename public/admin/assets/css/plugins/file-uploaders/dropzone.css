@@ -22,25 +22,7 @@
 	padding-right: 15px;
 }
 
-.dropzone .dz-message:before {
-	/* dropzone message icon */
-	content: '\ea81';
-	font-family: 'boxicons';
-	font-size: 3.5rem;
-	position: absolute;
-	top: 53px;
-	width: 80px;
-	height: 80px;
-	display: inline-block;
-	right: 50%;
-	margin-right: -40px;
-	line-height: 1;
-	z-index: 2;
-	color: #5A8DEE;
-	text-indent: 0;
-	font-weight: normal;
-	-webkit-font-smoothing: antialiased;
-}
+
 
 .dropzone .dz-preview {
 	background: transparent;

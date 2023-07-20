@@ -2,6 +2,8 @@
 
 namespace App\Providers;
 
+use App\Models\Article;
+use App\Models\Estate;
 use Illuminate\Cache\RateLimiting\Limit;
 use Illuminate\Foundation\Support\Providers\RouteServiceProvider as ServiceProvider;
 use Illuminate\Http\Request;
@@ -17,7 +19,7 @@ class RouteServiceProvider extends ServiceProvider
      *
      * @var string
      */
-    public const HOME = '/dashboard';
+    public const HOME = '/user/home';
 
     /**
      * Define your route model bindings, pattern filters, and other route configuration.
@@ -35,6 +37,13 @@ class RouteServiceProvider extends ServiceProvider
 
             Route::middleware('web')
                 ->group(base_path('routes/web.php'));
+        });
+        Route::bind('estateCode',function ($value){
+            return Estate::where('code' , $value )->firstOrFail();
+        });
+
+        Route::bind('articleSlug',function ($value){
+            return Article::where('slug' , $value )->firstOrFail();
         });
     }
 

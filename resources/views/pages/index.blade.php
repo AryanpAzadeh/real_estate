@@ -69,174 +69,46 @@
         <div class="jarallax card align-items-center justify-content-center border-0 p-md-5 p-4 bg-secondary overflow-hidden mt-n3" style="min-height: 65vh; background-image: url(img/real-estate/hero-image-v2.jpg);" data-jarallax data-speed="0.5"><span class="img-overlay opacity-40"></span>
             <div class="content-overlay" style="max-width: 856px;">
                 <h1 class="display-5 mb-5 pb-md-3 px-md-3 text-white text-center">راه آسان برای پیدا کردن یک ملک مناسب</h1>
-                <form class="form-group d-block">
-                    <div class="row g-0">
-                        <div class="col-md-10 d-sm-flex align-items-center">
-                            <div class="dropdown w-sm-50 border-end-sm" data-bs-toggle="select">
-                                <button class="btn btn-lg btn-link dropdown-toggle ps-2 ps-sm-3" type="button" data-bs-toggle="dropdown"><i class="fi-home me-2"></i><span class="dropdown-toggle-label">اجاره</span></button>
-                                <input type="hidden">
-                                <ul class="dropdown-menu">
-                                    <li><a class="dropdown-item" href="#"><span class="dropdown-item-label">اجاره</span></a></li>
-                                    <li><a class="dropdown-item" href="#"><span class="dropdown-item-label">فروش</span></a></li>
-                                </ul>
-                            </div>
-                            <hr class="d-sm-none my-2">
-                            <div class="dropdown w-sm-50 border-end-sm" data-bs-toggle="select">
-                                <button class="btn btn-lg btn-link dropdown-toggle ps-2 ps-sm-3" type="button" data-bs-toggle="dropdown"><i class="fi-map-pin me-2"></i><span class="dropdown-toggle-label">موقعیت</span></button>
-                                <input type="hidden">
-                                <ul class="dropdown-menu">
-                                    <li><a class="dropdown-item" href="#"><span class="dropdown-item-label">خانه</span></a></li>
-                                    <li><a class="dropdown-item" href="#"><span class="dropdown-item-label">آپارتمان</span></a></li>
-                                    <li><a class="dropdown-item" href="#"><span class="dropdown-item-label">تجاری و اداری</span></a></li>
-                                    <li><a class="dropdown-item" href="#"><span class="dropdown-item-label">سوئیت</span></a></li>
-                                </ul>
-                            </div>
-                            <hr class="d-sm-none my-2">
-                            <div class="dropdown w-sm-50" data-bs-toggle="select">
-                                <button class="btn btn-lg btn-link dropdown-toggle ps-2 ps-sm-3" type="button" data-bs-toggle="dropdown"><i class="fi-list me-2"></i><span class="dropdown-toggle-label">نوع ملک</span></button>
-                                <input type="hidden">
-                                <ul class="dropdown-menu">
-                                    <li><a class="dropdown-item" href="#"><span class="dropdown-item-label">خانه</span></a></li>
-                                    <li><a class="dropdown-item" href="#"><span class="dropdown-item-label">آپارتمان</span></a></li>
-                                    <li><a class="dropdown-item" href="#"><span class="dropdown-item-label">تجاری و اداری</span></a></li>
-                                    <li><a class="dropdown-item" href="#"><span class="dropdown-item-label">سوئیت</span></a></li>
-                                    <li><a class="dropdown-item" href="#"><span class="dropdown-item-label">زمین</span></a></li>
-                                </ul>
-                            </div>
-                        </div>
-                        <hr class="d-md-none mt-2">
-                        <div class="col-md-2 d-sm-flex align-items-center pt-3 pt-md-0">
-                            <button class="btn btn-lg btn-icon btn-primary px-3 w-100" type="button">جستجو</button>
-                        </div>
-                    </div>
-                </form>
             </div>
         </div>
     </section>
     <!-- Category-->
     <section class="container mb-5">
         <div class="row row-cols-lg-6 row-cols-sm-3 row-cols-2 g-3 g-xl-4">
-            <div class="col"><a class="icon-box card card-body h-100 border-0 shadow-sm card-hover h-100 text-center" href="real-estate-catalog-rent.html">
-                    <div class="icon-box-media bg-faded-primary text-primary rounded-circle mb-3 mx-auto"><i class="fi-real-estate-house"></i></div>
-                    <h3 class="icon-box-title fs-base mb-0">خانه</h3></a></div>
-            <div class="col"><a class="icon-box card card-body h-100 border-0 shadow-sm card-hover h-100 text-center" href="real-estate-catalog-sale.html">
-                    <div class="icon-box-media bg-faded-primary text-primary rounded-circle mb-3 mx-auto"><i class="fi-apartment"></i></div>
-                    <h3 class="icon-box-title fs-base mb-0">آپارتمان</h3></a></div>
-            <div class="col"><a class="icon-box card card-body h-100 border-0 shadow-sm card-hover h-100 text-center" href="real-estate-catalog-rent.html">
-                    <div class="icon-box-media bg-faded-primary text-primary rounded-circle mb-3 mx-auto"><i class="fi-shop"></i></div>
-                    <h3 class="icon-box-title fs-base mb-0">تجاری و اداری</h3></a></div>
-            <div class="col"><a class="icon-box card card-body h-100 border-0 shadow-sm card-hover h-100 text-center" href="real-estate-catalog-sale.html">
-                    <div class="icon-box-media bg-faded-primary text-primary rounded-circle mb-3 mx-auto"><i class="fi-rent"></i></div>
-                    <h3 class="icon-box-title fs-base mb-0">سوئیت</h3></a></div>
-            <div class="col"><a class="icon-box card card-body h-100 border-0 shadow-sm card-hover h-100 text-center" href="real-estate-catalog-rent.html">
-                    <div class="icon-box-media bg-faded-primary text-primary rounded-circle mb-3 mx-auto"><i class="fi-house-chosen"></i></div>
-                    <h3 class="icon-box-title fs-base mb-0">زمین</h3></a></div>
-            <div class="col">
-                <div class="dropdown h-100"><a class="icon-box card card-body h-100 border-0 shadow-sm card-hover text-center" href="#" data-bs-toggle="dropdown">
-                        <div class="icon-box-media bg-faded-primary text-primary rounded-circle mb-3 mx-auto"><i class="fi-dots-horisontal"></i></div>
-                        <h3 class="icon-box-title fs-base mb-0">گزینه های بیشتر</h3></a>
-                    <div class="dropdown-menu dropdown-menu-end my-1"><a class="dropdown-item fw-bold" href="real-estate-catalog-sale.html"><i class="fi-single-bed fs-base opacity-60 me-2"></i>سوئیت</a><a class="dropdown-item fw-bold" href="real-estate-catalog-rent.html"><i class="fi-computer fs-base opacity-60 me-2"></i>دفتر کار</a><a class="dropdown-item fw-bold" href="real-estate-catalog-sale.html"><i class="fi-real-estate-buy fs-base opacity-60 me-2"></i>زمین</a><a class="dropdown-item fw-bold" href="real-estate-catalog-rent.html"><i class="fi-parking fs-base opacity-60 me-2"></i>خانه حیاط دار</a></div>
-                </div>
-            </div>
+            @foreach(\App\Models\Type::all() as $type)
+                <div class="col"><a class="icon-box card card-body h-100 border-0 shadow-sm card-hover h-100 text-center" href="#">
+                        <div class="icon-box-media bg-faded-primary text-primary rounded-circle mb-3 mx-auto"><i class="fi-real-estate-house"></i></div>
+                        <h3 class="icon-box-title fs-base mb-0">{{$type->name}}</h3></a></div>
+
+            @endforeach
         </div>
     </section>
     <!-- Top properties-->
     <section class="container mb-5 pb-md-4">
         <div class="d-flex align-items-center justify-content-between mb-3">
-            <h2 class="h3 mb-0 ">خانه های ویژه ما</h2><a class="btn btn-link fw-normal p-0" href="real-estate-catalog-rent.html">مشاهده همه <i class="fi-arrow-long-left ms-2"></i></a>
+            <h2 class="h3 mb-0 ">خانه های ویژه ما</h2><a class="btn btn-link fw-normal p-0" href="{{route('pages.estate')}}">مشاهده همه <i class="fi-arrow-long-left ms-2"></i></a>
         </div>
         <div class="tns-carousel-wrapper tns-controls-outside-xxl tns-nav-outside tns-nav-outside-flush mx-n2" dir="ltr">
             <div class="tns-carousel-inner row gx-4 mx-0 pt-3 pb-4" data-carousel-options="{&quot;items&quot;: 4, &quot;responsive&quot;: {&quot;0&quot;:{&quot;items&quot;:1},&quot;500&quot;:{&quot;items&quot;:2},&quot;768&quot;:{&quot;items&quot;:3},&quot;992&quot;:{&quot;items&quot;:4}}}">
                 <!-- Item-->
-                <div class="col">
-                    <div class="card shadow-sm card-hover border-0 h-100">
-                        <div class="card-img-top card-img-hover"><a class="img-overlay" href="real-estate-single-v1.html"></a>
-                            <div class="position-absolute start-0 top-0 pt-3 pe-3"><span class="d-table badge bg-success mb-1">تایید</span><span class="d-table badge bg-info">جدید</span></div>
-                            <div class="content-overlay end-0 top-0 pt-3 ps-3">
-                                <button class="btn btn-icon btn-light btn-xs text-primary rounded-circle" type="button" data-bs-toggle="tooltip" data-bs-placement="right" title="Add to Wishlist"><i class="fi-heart"></i></button>
-                            </div><img src="img/real-estate/catalog/01.jpg" alt="Image">
+                @foreach($estates as $estate)
+                    <div class="col">
+                        <div class="card shadow-sm card-hover border-0 h-100">
+                            <div class="card-img-top card-img-hover"><a class="img-overlay" href="{{route('pages.single_estate' , $estate->code)}}"></a>
+                                <img src="{{asset('/storage/estate_images/' . $estate->id .'/' . $estate->images()->first()->image)}}" alt="{{$estate->title}}">
+                            </div>
+                            <div class="card-body position-relative pb-3">
+                                <h4 class="mb-1 fs-sm fw-normal text-uppercase text-primary">{{$estate->category}}</h4>
+                                <h3 class="h6 mb-2 fs-base"><a class="nav-link stretched-link" href="{{route('pages.single_estate' , $estate->code)}}">{{$estate->title}}</a></h3>
+                                <div><i class="fi-home mt-n1 ms-2 lead align-middle opacity-70"></i> {{$estate->agency->name}} </div>
+                            </div>
+                            <div class="card-footer d-flex align-items-center justify-content-center mx-3 pt-3 text-nowrap"><span class="d-inline-block mx-1 px-2 fs-sm">{{$estate->bedrooms}}<i class="fi-bed me-1 mt-n1 fs-lg text-muted"></i></span><span class="d-inline-block mx-1 px-2 fs-sm">{{$estate->wc}}<i class="fi-bath me-1 mt-n1 fs-lg text-muted"></i></span><span class="d-inline-block mx-1 px-2 fs-sm">{{$estate->parking}}<i class="fi-car me-1 mt-n1 fs-lg text-muted"></i></span></div>
                         </div>
-                        <div class="card-body position-relative pb-3">
-                            <h4 class="mb-1 fs-sm fw-normal text-uppercase text-primary">اجاره</h4>
-                            <h3 class="h6 mb-2 fs-base"><a class="nav-link stretched-link" href="real-estate-single-v1.html">آپارتمان 3خوابه | 85 مترمربع</a></h3>
-                            <p class="mb-2 fs-sm text-muted">آپارتمان مدرن استخردار</p>
-                            <div><i class="fi-cash mt-n1 ms-2 lead align-middle opacity-70"></i> 250000 ت</div>
-                        </div>
-                        <div class="card-footer d-flex align-items-center justify-content-center mx-3 pt-3 text-nowrap"><span class="d-inline-block mx-1 px-2 fs-sm">3<i class="fi-bed me-1 mt-n1 fs-lg text-muted"></i></span><span class="d-inline-block mx-1 px-2 fs-sm">2<i class="fi-bath me-1 mt-n1 fs-lg text-muted"></i></span><span class="d-inline-block mx-1 px-2 fs-sm">2<i class="fi-car me-1 mt-n1 fs-lg text-muted"></i></span></div>
                     </div>
-                </div>
-                <!-- Item-->
-                <div class="col">
-                    <div class="card shadow-sm card-hover border-0 h-100">
-                        <div class="card-img-top card-img-hover"><a class="img-overlay" href="real-estate-single-v1.html"></a>
-                            <div class="position-absolute start-0 top-0 pt-3 pe-3"><span class="d-table badge bg-success mb-1">تایید</span><span class="d-table badge bg-danger">ویژه</span></div>
-                            <div class="content-overlay end-0 top-0 pt-3 ps-3">
-                                <button class="btn btn-icon btn-light btn-xs text-primary rounded-circle" type="button" data-bs-toggle="tooltip" data-bs-placement="right" title="Add to Wishlist"><i class="fi-heart"></i></button>
-                            </div><img src="img/real-estate/catalog/02.jpg" alt="Image">
-                        </div>
-                        <div class="card-body position-relative pb-3">
-                            <h4 class="mb-1 fs-sm fw-normal text-uppercase text-primary">فروش</h4>
-                            <h3 class="h6 mb-2 fs-base"><a class="nav-link stretched-link" href="real-estate-single-v1.html">ویلا 2 طبقه | 150 متر مربع</a></h3>
-                            <p class="mb-2 fs-sm text-muted">ویلا لوکس در لوس آنجلس</p>
-                            <div><i class="fi-cash mt-n1 ms-2 lead align-middle opacity-70"></i> 840000 ت</div>
-                        </div>
-                        <div class="card-footer d-flex align-items-center justify-content-center mx-3 pt-3 text-nowrap"><span class="d-inline-block mx-1 px-2 fs-sm">4<i class="fi-bed me-1 mt-n1 fs-lg text-muted"></i></span><span class="d-inline-block mx-1 px-2 fs-sm">2<i class="fi-bath me-1 mt-n1 fs-lg text-muted"></i></span><span class="d-inline-block mx-1 px-2 fs-sm">2<i class="fi-car me-1 mt-n1 fs-lg text-muted"></i></span></div>
-                    </div>
-                </div>
-                <!-- Item-->
-                <div class="col">
-                    <div class="card shadow-sm card-hover border-0 h-100">
-                        <div class="card-img-top card-img-hover"><a class="img-overlay" href="real-estate-single-v1.html"></a>
-                            <div class="position-absolute start-0 top-0 pt-3 pe-3"><span class="d-table badge bg-success mb-1">تایید</span></div>
-                            <div class="content-overlay end-0 top-0 pt-3 ps-3">
-                                <button class="btn btn-icon btn-light btn-xs text-primary rounded-circle" type="button" data-bs-toggle="tooltip" data-bs-placement="right" title="Add to Wishlist"><i class="fi-heart"></i></button>
-                            </div><img src="img/real-estate/catalog/03.jpg" alt="Image">
-                        </div>
-                        <div class="card-body position-relative pb-3">
-                            <h4 class="mb-1 fs-sm fw-normal text-uppercase text-primary">اجاره</h4>
-                            <h3 class="h6 mb-2 fs-base"><a class="nav-link stretched-link" href="real-estate-single-v1.html">آپارتمان 2 خوابه | 110 متر</a></h3>
-                            <p class="mb-2 fs-sm text-muted">خصوصیات تپه دریایی آبی</p>
-                            <div><i class="fi-cash mt-n1 ms-2 lead align-middle opacity-70"></i> 750000 ت</div>
-                        </div>
-                        <div class="card-footer d-flex align-items-center justify-content-center mx-3 pt-3 text-nowrap"><span class="d-inline-block mx-1 px-2 fs-sm">3<i class="fi-bed me-1 mt-n1 fs-lg text-muted"></i></span><span class="d-inline-block mx-1 px-2 fs-sm">2<i class="fi-bath me-1 mt-n1 fs-lg text-muted"></i></span><span class="d-inline-block mx-1 px-2 fs-sm">2<i class="fi-car me-1 mt-n1 fs-lg text-muted"></i></span></div>
-                    </div>
-                </div>
-                <!-- Item-->
-                <div class="col">
-                    <div class="card shadow-sm card-hover border-0 h-100">
-                        <div class="card-img-top card-img-hover"><a class="img-overlay" href="real-estate-single-v1.html"></a>
-                            <div class="position-absolute start-0 top-0 pt-3 pe-3"><span class="d-table badge bg-success mb-1">تایید</span><span class="d-table badge bg-info">جدید</span></div>
-                            <div class="content-overlay end-0 top-0 pt-3 ps-3">
-                                <button class="btn btn-icon btn-light btn-xs text-primary rounded-circle" type="button" data-bs-toggle="tooltip" data-bs-placement="right" title="Add to Wishlist"><i class="fi-heart"></i></button>
-                            </div><img src="img/real-estate/catalog/04.jpg" alt="Image">
-                        </div>
-                        <div class="card-body position-relative pb-3">
-                            <h4 class="mb-1 fs-sm fw-normal text-uppercase text-primary">فروش</h4>
-                            <h3 class="h6 mb-2 fs-base"><a class="nav-link stretched-link" href="real-estate-single-v1.html">ویلا 2 طبقه | 150 متر مربع</a></h3>
-                            <p class="mb-2 fs-sm text-muted">خصوصیات تپه دریایی آبی</p>
-                            <div><i class="fi-cash mt-n1 ms-2 lead align-middle opacity-70"></i> 1040000 ت</div>
-                        </div>
-                        <div class="card-footer d-flex align-items-center justify-content-center mx-3 pt-3 text-nowrap"><span class="d-inline-block mx-1 px-2 fs-sm">4<i class="fi-bed me-1 mt-n1 fs-lg text-muted"></i></span><span class="d-inline-block mx-1 px-2 fs-sm">2<i class="fi-bath me-1 mt-n1 fs-lg text-muted"></i></span><span class="d-inline-block mx-1 px-2 fs-sm">2<i class="fi-car me-1 mt-n1 fs-lg text-muted"></i></span></div>
-                    </div>
-                </div>
-                <!-- Item-->
-                <div class="col">
-                    <div class="card shadow-sm card-hover border-0 h-100">
-                        <div class="card-img-top card-img-hover"><a class="img-overlay" href="real-estate-single-v1.html"></a>
-                            <div class="position-absolute start-0 top-0 pt-3 pe-3"><span class="d-table badge bg-success mb-1">تایید</span></div>
-                            <div class="content-overlay end-0 top-0 pt-3 ps-3">
-                                <button class="btn btn-icon btn-light btn-xs text-primary rounded-circle" type="button" data-bs-toggle="tooltip" data-bs-placement="right" title="Add to Wishlist"><i class="fi-heart"></i></button>
-                            </div><img src="img/real-estate/catalog/05.jpg" alt="Image">
-                        </div>
-                        <div class="card-body position-relative pb-3">
-                            <h4 class="mb-1 fs-sm fw-normal text-uppercase text-primary">فروش</h4>
-                            <h3 class="h6 mb-2 fs-base"><a class="nav-link stretched-link" href="real-estate-single-v1.html">ویلا 2 طبقه | 150 متر مربع</a></h3>
-                            <p class="mb-2 fs-sm text-muted">ویلا لوکس در لوس آنجلس</p>
-                            <div><i class="fi-cash mt-n1 ms-2 lead align-middle opacity-70"></i> 180000 ت</div>
-                        </div>
-                        <div class="card-footer d-flex align-items-center justify-content-center mx-3 pt-3 text-nowrap"><span class="d-inline-block mx-1 px-2 fs-sm">4<i class="fi-bed me-1 mt-n1 fs-lg text-muted"></i></span><span class="d-inline-block mx-1 px-2 fs-sm">2<i class="fi-bath me-1 mt-n1 fs-lg text-muted"></i></span><span class="d-inline-block mx-1 px-2 fs-sm">2<i class="fi-car me-1 mt-n1 fs-lg text-muted"></i></span></div>
-                    </div>
-                </div>
+
+
+                @endforeach
+
             </div>
         </div>
     </section>
@@ -259,7 +131,7 @@
                     <div class="border border-5 border-white rounded-circle bg-white ms-n3 mt-n4"><img class="rounded-circle" src="img/avatars/47.jpg" width="110" alt="Avatar"></div>
                     <div class="border border-5 border-white rounded-circle bg-white ms-n3 mt-n4"><img class="rounded-circle" src="img/avatars/48.jpg" width="110" alt="Avatar"></div>
                     <div class="border border-5 border-white rounded-circle bg-white ms-n3 mt-n4"><img class="rounded-circle" src="img/avatars/49.jpg" width="110" alt="Avatar"></div>
-                </div><a class="btn btn-lg btn-primary w-sm-auto w-100" href="#">یافتن مشاوره ملک<i class="fi-chevron-right ms-2"></i></a>
+            </div>
             </div>
         </div>
     </section>
@@ -269,28 +141,18 @@
         <div class="row gy-5">
             <div class="col-lg-7">
                 <!-- Post-->
-                <article class="card border-0 shadow-sm card-hover card-horizontal mb-4"><a class="card-img-top" href="#" style="background-image: url(img/real-estate/blog/05.jpg);"></a>
-                    <div class="card-body"><a class="fs-xs text-uppercase text-decoration-none" href="real-estate-blog-single.html">سبک زندگی</a>
-                        <h3 class="fs-base pt-1 mb-2"><a class="nav-link" href="real-estate-blog-single.html">5 پروژه جاه طلبانه آسان برای بهبود خانه شما</a></h3>
-                        <p class="fs-sm text-muted">ارائه راهکارها و شرایط سخت تایپ به پایان رسد وزمان مورد نیاز شامل حروفچینی دستاوردهای اصلی و جوابگوی سوالات پیوسته اهل دنیای... </p><a class="d-flex align-items-center text-decoration-none" href="#"><img class="rounded-circle" src="img/avatars/10.jpg" width="44" alt="Avatar">
-                            <div class="pe-2">
-                                <h6 class="fs-sm text-nav lh-base mb-1">آنت بلک</h6>
-                                <div class="d-flex text-body fs-xs"><span class="me-2 pe-1"><i class="fi-calendar-alt opacity-70 ms-1"></i>1 اردیبهشت</span><span><i class="fi-chat-circle opacity-70 ms-1"></i>1 دیدگاه</span></div>
-                            </div></a>
-                    </div>
-                </article>
-                <!-- Post-->
-                <article class="card border-0 shadow-sm card-hover card-horizontal mb-4"><a class="card-img-top" href="real-estate-blog-single.html" style="background-image: url(img/real-estate/blog/06.jpg);"></a>
-                    <div class="card-body"><a class="fs-xs text-uppercase text-decoration-none" href="#">نکات و ترفندها</a>
-                        <h3 class="fs-base pt-1 mb-2"><a class="nav-link" href="real-estate-blog-single.html">7 نکته برای دستیابی به حداکثر آرامش</a></h3>
-                        <p class="fs-sm text-muted">متخصصان را می طلبد تا با نرم افزارها شناخت بیشتری را برای طراحان رایانه ای علی الخصوص طراحان خلاقی و فرهنگ پیشرو ...</p><a class="d-flex align-items-center text-decoration-none" href="#"><img class="rounded-circle" src="img/avatars/08.jpg" width="44" alt="Avatar">
-                            <div class="pe-2">
-                                <h6 class="fs-sm text-nav lh-base mb-1">الهام کریمی</h6>
-                                <div class="d-flex text-body fs-xs"><span class="me-2 pe-1"><i class="fi-calendar-alt opacity-70 ms-1"></i>27 تیر</span><span><i class="fi-chat-circle opacity-70 ms-1"></i>3 دیدگاه</span></div>
-                            </div></a>
-                    </div>
-                </article>
-                <div class="pt-2"><a class="btn btn-lg btn-outline-primary w-sm-auto w-100" href="real-estate-blog.html">مقالات بیشتر</a></div>
+                @foreach(\App\Models\Article::latest()->limit(2)->get() as $article)
+                    <article class="card border-0 shadow-sm card-hover card-horizontal mb-4"><a class="card-img-top" href="{{route('pages.single_article' , $article->slug)}}" style="background-image: url('{{asset('/storage/article_images/' . $article->image)}}');"></a>
+                        <div class="card-body"><a class="fs-xs text-uppercase text-decoration-none" href="#">{{ $article->category->name}}</a>
+                            <h3 class="fs-base pt-1 mb-2"><a class="nav-link" href="{{route('pages.single_article' , $article->slug)}}">{{$article->title}}</a></h3>
+                                <div class="pe-2">
+                                    <div class="d-flex text-body fs-xs"><span class="me-2 pe-1"><i class="fi-calendar-alt opacity-70 ms-1"></i>{{verta($article->created_at)->format('Y-m-d')}}</span></div>
+                                </div>
+                        </div>
+                    </article>
+                @endforeach
+
+                <div class="pt-2"><a class="btn btn-lg btn-outline-primary w-sm-auto w-100" href="{{route('pages.articles')}}">مقالات بیشتر</a></div>
             </div>
             <div class="col-1 d-lg-block d-none">
                 <hr class="hr-vertical mx-auto">
@@ -328,7 +190,7 @@
                         <h5 class="mb-2 pb-1 ">محاسبه ارزش ملک</h5>
                         <p class="mb-0">ما می توانیم اجاره تقریبی شما را محاسبه کنیم.</p>
                     </div>
-                    <div class="card-footer py-1 border-0"><a class="stretched-link btn btn-link mb-3 px-0 text-warning" href="#cost-calculator" data-bs-toggle="modal">محاسبه</a></div>
+                    <div class="card-footer py-1 border-0"><a class="stretched-link btn btn-link mb-3 px-0 text-warning" href="#" data-bs-toggle="modal">محاسبه</a></div>
                 </div>
             </div>
             <!-- Help center link-->
@@ -338,7 +200,7 @@
                         <h5 class="mb-2 pb-1 ">دیدن از مرکز پشتیبانی</h5>
                         <p class="mb-0">در اینجا می توانید سوالات متداول را پیدا کنید.</p>
                     </div>
-                    <div class="card-footer py-1 border-0"><a class="stretched-link btn btn-link mb-3 px-0 text-accent" href="real-estate-help-center.html">بیشتر بخوانید</a></div>
+                    <div class="card-footer py-1 border-0"><a class="stretched-link btn btn-link mb-3 px-0 text-accent" href="#">بیشتر بخوانید</a></div>
                 </div>
             </div>
             <!-- How it works link-->
@@ -348,7 +210,7 @@
                         <h5 class="mb-2 pb-1 ">آشنایی با نحوه فعالیت</h5>
                         <p class="mb-0">در اینجا یک راهنمای گام به گام برای اجاره کنندگان است.</p>
                     </div>
-                    <div class="card-footer py-1 border-0"><a class="stretched-link btn btn-link mb-3 px-0 text-success" href="real-estate-about.html">شروع کنید</a></div>
+                    <div class="card-footer py-1 border-0"><a class="stretched-link btn btn-link mb-3 px-0 text-success" href="#">شروع کنید</a></div>
                 </div>
             </div>
         </div>
@@ -362,7 +224,7 @@
                         با اطمینان ملک بخرید <br>
                         فروش ملک با بهترین قیمت
                     </h2>
-                    <p class="mb-4 pb-md-3 fs-lg">لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ و با استفاده از طراحان گرافیک است. چاپگرها و متون بلکه روزنامه و مجله در ستون و سطرآنچنان که لازم است و برای شرایط فعلی تکنولوژی مورد نیاز و کاربردهای متنوع با هدف بهبود ابزارهای کاربردی می باشد. </p><a class="btn btn-lg btn-primary" href="real-estate-catalog-sale.html"><i class="fi-search me-2"></i>ملک خود را پیدا کن!</a>
+                    <p class="mb-4 pb-md-3 fs-lg">لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ و با استفاده از طراحان گرافیک است. چاپگرها و متون بلکه روزنامه و مجله در ستون و سطرآنچنان که لازم است و برای شرایط فعلی تکنولوژی مورد نیاز و کاربردهای متنوع با هدف بهبود ابزارهای کاربردی می باشد. </p><a class="btn btn-lg btn-primary" href="{{route('pages.estate')}}"><i class="fi-search me-2"></i>ملک خود را پیدا کن!</a>
                 </div>
                 <div class="col-4 d-md-block d-none align-self-end px-0"><img class="mt-n5" src="img/real-estate/about/01.png" width="406" alt="Cover image"></div>
             </div>

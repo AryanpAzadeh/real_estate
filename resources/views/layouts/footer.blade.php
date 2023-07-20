@@ -4,22 +4,19 @@
         <div class="row mb-5 pb-md-3 pb-lg-4">
             <div class="col-lg-6 mb-lg-0 mb-4">
                 <div class="d-flex flex-sm-row flex-column justify-content-between mx-n2">
-                    <div class="mb-sm-0 mb-4 px-2"><a class="d-inline-block mb-4" href="real-estate-home-v1.html"><img src="img/logo/logo-dark.svg" width="116" alt="logo"></a>
+                    <div class="mb-sm-0 mb-4 px-2"><a class="d-inline-block mb-4" href="{{route('pages.index')}}"><img src="/img/logo/logo-dark.svg" width="116" alt="logo"></a>
                         <ul class="nav flex-column mb-sm-4 mb-2">
-                            <li class="nav-item mb-2"><a class="nav-link p-0 fw-normal" href="mailto:example@email.com"><i class="fi-mail mt-n1 me-2 align-middle opacity-70"></i>example@email.com</a></li>
-                            <li class="nav-item"><a class="nav-link p-0 fw-normal" href="tel:4065550120"><i class="fi-device-mobile mt-n1 me-2 align-middle opacity-70"></i>(406) 555-0120</a></li>
+                            <li class="nav-item mb-2"><a class="nav-link p-0 fw-normal" href="mailto:aryazdh@gmail.com"><i class="fi-mail mt-n1 me-2 align-middle opacity-70"></i>aryazdh@gmail.com</a></li>
+                            <li class="nav-item"><a class="nav-link p-0 fw-normal" href="tel:+989145433701"><i class="fi-device-mobile mt-n1 me-2 align-middle opacity-70"></i>09145433701</a></li>
                         </ul>
                         <div class="pt-2"><a class="btn btn-icon btn-light-primary btn-xs shadow-sm rounded-circle me-2 mb-2" href="#"><i class="fi-facebook"></i></a><a class="btn btn-icon btn-light-primary btn-xs shadow-sm rounded-circle me-2 mb-2" href="#"><i class="fi-twitter"></i></a><a class="btn btn-icon btn-light-primary btn-xs shadow-sm rounded-circle me-2 mb-2" href="#"><i class="fi-viber"></i></a><a class="btn btn-icon btn-light-primary btn-xs shadow-sm rounded-circle me-2 mb-2" href="#"><i class="fi-telegram"></i></a></div>
                     </div>
                     <div class="mb-sm-0 mb-4 px-2">
                         <h4 class="h5">لینک های سریع</h4>
                         <ul class="nav flex-column">
-                            <li class="nav-item mb-2"><a class="nav-link p-0 fw-normal" href="#">خرید یک ملک</a></li>
-                            <li class="nav-item mb-2"><a class="nav-link p-0 fw-normal" href="#">فروش یک ملک</a></li>
-                            <li class="nav-item mb-2"><a class="nav-link p-0 fw-normal" href="#">اجاره یک ملک</a></li>
-                            <li class="nav-item mb-2"><a class="nav-link p-0 fw-normal" href="#">محاسبه یک ملک</a></li>
-                            <li class="nav-item mb-2"><a class="nav-link p-0 fw-normal" href="#">پیشنهادهای ویژه</a></li>
-                            <li class="nav-item mb-2"><a class="nav-link p-0 fw-normal" href="#">شهرهای پیشنهادی</a></li>
+                            <li class="nav-item mb-2"><a class="nav-link p-0 fw-normal" href="{{route('pages.estate')}}">املاک</a></li>
+                            <li class="nav-item mb-2"><a class="nav-link p-0 fw-normal" href="{{route('pages.articles')}}">مقالات</a></li>
+                            <li class="nav-item mb-2"><a class="nav-link p-0 fw-normal" href="{{route('pages.contact')}}">ارتباط</a></li>
                         </ul>
                     </div>
                     <div class="px-2">
@@ -36,26 +33,22 @@
             </div>
             <div class="col-xl-5 col-lg-6 offset-xl-1">
                 <h4 class="h5">بلاگ های اخیر</h4>
-                <article class="d-flex align-items-start" style="max-width: 640px;"><a class="d-none d-sm-block flex-shrink-0 me-sm-4 mb-sm-0 mb-3" href="real-estate-blog-single.html"><img class="rounded-3" src="img/real-estate/blog/th01.jpg" width="100" alt="Blog post"></a>
-                    <div>
-                        <h6 class="mb-1 fs-sm fw-normal text-uppercase text-primary">نکات و ترفندها</h6>
-                        <h5 class="mb-2 fs-base"><a class="nav-link" href="real-estate-blog-single.html">راهنمای ما برای جستجوی آپارتمان هوشمند</a></h5>
-                        <p class="mb-2 fs-sm">لورم ایپسوم ساختار چاپ و متن را در بر می گیرد. لورم ایپسوم استاندارد صنعت بوده است...</p><a class="nav-link nav-link-muted d-inline-block me-3 p-0 fs-xs fw-normal" href="#"><i class="fi-calendar mt-n1 ms-1 fs-sm align-middle opacity-70"></i>24 خرداد</a><a class="nav-link nav-link-muted d-inline-block me-3 p-0 fs-xs fw-normal" href="#"><i class="fi-chat-circle mt-n1 ms-1 fs-sm align-middle opacity-70"></i>2 کامنت</a>
-                    </div>
-                </article>
+               @if(\App\Models\Article::count() > 0)
+                    <article class="d-flex align-items-start" style="max-width: 640px;"><a class="d-none d-sm-block flex-shrink-0 me-sm-4 mb-sm-0 mb-3" href="{{route('pages.single_article' , \App\Models\Article::first()->slug)}}"><img class="rounded-3" src="{{asset('/storage/article_images/' . \App\Models\Article::first()->image)}}" width="100" alt="Blog post"></a>
+                        <div>
+                            <h6 class="mb-1 fs-sm fw-normal text-uppercase text-primary">{{\App\Models\Article::first()->category->name}}</h6>
+                            <h5 class="mb-2 fs-base"><a class="nav-link" href="{{route('pages.single_article' , \App\Models\Article::first()->slug)}}">{{\App\Models\Article::first()->title}}</a></h5>
+                            <a class="nav-link nav-link-muted d-inline-block me-3 p-0 fs-xs fw-normal" href="#"><i class="fi-calendar mt-n1 ms-1 fs-sm align-middle opacity-70"></i>{{verta(\App\Models\Article::first()->created_at)->format('Y-m-d')}}</a>
+                        </div>
+                    </article>
+               @endif
                 <hr class="text-dark opacity-10 my-4">
-                <article class="d-flex align-items-start" style="max-width: 640px;"><a class="d-none d-sm-block flex-shrink-0 me-sm-4 mb-sm-0 mb-3" href="real-estate-blog-single.html"><img class="rounded-3" src="img/real-estate/blog/th02.jpg" width="100" alt="Blog post"></a>
-                    <div>
-                        <h6 class="mb-1 fs-sm fw-normal text-uppercase text-primary">نکات و ترفندها</h6>
-                        <h5 class="mb-2 fs-base"><a class="nav-link" href="real-estate-blog-single.html">10 روش برتر برای تجدید فضای خود</a></h5>
-                        <p class="mb-2 fs-sm">لورم ایپسوم ساختار چاپ و متن را در بر می گیرد. لورم ایپسوم استاندارد صنعت بوده است...</p><a class="nav-link nav-link-muted d-inline-block me-3 p-0 fs-xs fw-normal" href="#"><i class="fi-calendar mt-n1 ms-1 fs-sm align-middle opacity-70"></i>18 مرداد</a><a class="nav-link nav-link-muted d-inline-block me-3 p-0 fs-xs fw-normal" href="#"><i class="fi-chat-circle mt-n1 ms-1 fs-sm align-middle opacity-70"></i> 0 کامنت</a>
-                    </div>
-                </article>
+
             </div>
         </div>
         <!-- Banner-->
         <div class="bg-dark rounded-3">
-            <div class="col-xxl-10 col-md-11 col-10 d-flex flex-md-row flex-column-reverse align-items-md-end align-items-center mx-auto px-0"><img class="flex-shrink-0 mt-md-n5 ms-md-5" src="img/real-estate/illustrations/mobile.svg" width="240" alt="اپلیکیشن">
+            <div class="col-xxl-10 col-md-11 col-10 d-flex flex-md-row flex-column-reverse align-items-md-end align-items-center mx-auto px-0"><img class="flex-shrink-0 mt-md-n5 ms-md-5" src="/img/real-estate/illustrations/mobile.svg" width="240" alt="اپلیکیشن">
                 <div class="align-self-center d-flex flex-lg-row flex-column align-items-lg-center pt-md-3 pt-5 ps-xxl-4 text-md-start text-center">
                     <div class="me-md-5">
                         <h4 class="text-light">دانلود اپلیکیشن</h4>

@@ -15,7 +15,12 @@ return new class extends Migration
     {
         Schema::create('countries', function (Blueprint $table) {
             $table->id();
-            $table->timestamps();
+            $table->string('name');
+            $table->string('iso_code_2');
+            $table->string('iso_code_3');
+            $table->text('address_format');
+            $table->tinyInteger('postcode_required');
+            $table->tinyInteger('status');
         });
     }
 

@@ -6,4 +6,3 @@
 <script src="{{asset('/vendor/tiny-slider/dist/min/tiny-slider.js')}}"></script>
 <script src="{{asset('/vendor/jarallax/dist/jarallax.min.js')}}"></script>
 <!-- Main theme script-->
-<script src="{{asset('/js/theme.min.js')}}"></script>
